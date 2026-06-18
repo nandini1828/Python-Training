@@ -1,8 +1,7 @@
 # Indiana Jones OOP Program - Full Explanation
 
 ---
-
-# 📌 1. Introduction
+ 1. Introduction
 
 This program simulates a small **Indiana Jones adventure system** using:
 
