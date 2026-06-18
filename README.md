@@ -1,6 +1,6 @@
 # Indiana Jones OOP Program - Full Explanation
 
----
+
  1. Introduction
 
 This program simulates a small **Indiana Jones adventure system** using:
@@ -13,11 +13,10 @@ This program simulates a small **Indiana Jones adventure system** using:
 - Polymorphism
 - Abstraction
 
----
 
 2. Abstraction
 
-```python
+python
 from abc import ABC, abstractmethod
 📖 Meaning
 
