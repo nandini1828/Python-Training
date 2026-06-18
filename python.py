@@ -22,6 +22,7 @@ def set_health(self, health):
     self.__health = health
 
 def role(self):
+    
     return "Treasure Explorer"
 
 def show(self):
