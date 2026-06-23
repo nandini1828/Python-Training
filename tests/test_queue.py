@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import unittest
 
 from day2.core.queue import (
@@ -42,3 +43,15 @@ class TestQueue(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+=======
+from collection_utils.list_utils import SimpleQueue
+
+
+def test_simple_queue():
+    q = SimpleQueue()
+    q.enqueue(1)
+    q.enqueue(2)
+    assert q.size() == 2
+    assert q.dequeue() == 1
+    assert q.dequeue() == 2
+>>>>>>> 6dd5e5f (Pushing structured code)
