@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python-Training
 =======
 # Python Data Types: The Exhaustive Mastery Guide
