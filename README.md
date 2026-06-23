@@ -36,4 +36,3 @@ This repository is a structured learning project for Python data types, introspe
 - `query_json(data_dict, path_str, default=None)` - nested dict query using dot notation.
 - `word_count(text)` - lowercase and punctuation-safe word frequency counter.
 - `deconstruct_object(obj)` - recursively convert custom instances into nested dictionaries.
->>>>>>> 6dd5e5f (Pushing structured code)
