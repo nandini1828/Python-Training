@@ -1,0 +1,28 @@
+"""
+Requirements for Python Training Project
+
+Package dependencies for running the training modules and tests.
+"""
+
+# Core testing framework
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Code quality and linting
+pylint>=2.15.0
+flake8>=5.0.0
+black>=22.10.0
+isort>=5.10.0
+
+# Type checking
+mypy>=0.991
+
+# Documentation
+sphinx>=5.3.0
+
+# Utilities
+colorama>=0.4.6
+
+# Optional: For jupyter notebook support
+jupyter>=1.0.0
+ipython>=8.5.0
