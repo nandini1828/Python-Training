@@ -55,3 +55,19 @@ class DocumentationInspector:
             ),
             "methods": method_details
         }
+
+
+def get_docstrings(obj) -> dict:
+    """Get method names and their docstrings from an object.
+    
+    Parameters
+    ----------
+    obj : object
+        Any Python object or class.
+    
+    Returns
+    -------
+    dict
+        Object metadata and method documentation details.
+    """
+    return DocumentationInspector.inspect(obj)

@@ -43,3 +43,19 @@ class MethodInspector:
                 )
 
         return methods
+
+
+def get_method_names(obj) -> list[str]:
+    """Get all public method names from an object.
+    
+    Parameters
+    ----------
+    obj : object
+        Any Python object.
+    
+    Returns
+    -------
+    list[str]
+        List of public method names.
+    """
+    return MethodInspector.get_methods(obj)
