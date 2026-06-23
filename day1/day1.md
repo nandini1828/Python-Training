@@ -1,117 +1,145 @@
-Day 1 - Python Fundamentals
+Day 1 - Python Fundamentals and Object-Oriented Programming
 
-Data Types
+Overview
 
-A data type defines what kind of value a variable can store.
+This module covers Python fundamentals including data types, classes, objects, object-oriented programming concepts, and reusable utility functions.
 
+⸻
 
-Common Data Types
+Folder Structure
 
-* str → Text
-* int → Whole numbers
-* float → Decimal numbers
-* bool → True/False
-* list → Ordered collection
-* tuple → Immutable collection
-* dict → Key-value pairs
-* set → Unique values
+models/
 
-Examples
+Contains reusable business models and OOP examples.
 
-name = "Karthik"
-age = 21
-salary = 50000.5
-is_active = True
+student.py
 
+Implemented a Student class with:
 
-Useful Methods for Data Types
+* Instance variables
+* Constructor (__init__)
+* Object creation
+* Instance methods
 
-String
+bank_account.py
 
-upper()
-lower()
-replace()
-split()
-strip()
+Implemented Encapsulation using:
 
-List
+* Private attributes
+* Getter methods
+* Controlled access to data
 
-append()
-remove()
-pop()
-sort()
+vehicle.py
 
-Dictionary
+Implemented Abstraction using:
 
-get()
-keys()
-values()
-items()
-update()
+* Abstract Base Classes (ABC)
+* Abstract methods
+* Concrete implementation through inheritance
 
-Set
+animal.py
 
-add()
-remove()
-union()
-intersection()
+Implemented Inheritance using:
 
-Tuple
+* Parent class
+* Child class
+* Method reuse
 
-count()
-index()
+⸻
 
+utils/
 
-Data Structures
+Contains reusable utility classes.
 
-A data structure is a way of organizing and storing data efficiently.
+collection_utils.py
 
-Types
+Implemented:
 
-* List
-* Tuple
-* Dictionary
-* Set
-* Stack (LIFO)
-* Queue (FIFO)
-* Linked List
-* Tree
-* Graph
+* Tag merging using sets
+* Duplicate removal
+* Set operations
+* Collection helper methods
 
+type_utils.py
 
-OOP (Object-Oriented Programming)
+Implemented:
 
-OOP is a programming approach based on Classes and Objects.
+* Safe type conversion
+* Type validation
+* Instance checking
 
-Class
+introspection_utils.py
 
-Blueprint or template.
+Implemented:
 
-class Employee:
-    pass
+* type()
+* id()
+* dir()
+* Public attribute extraction
 
-Object
+⸻
 
-Instance of a class.
+examples/
 
-emp1 = Employee()
+Contains executable examples demonstrating concepts.
 
+class_objects.py
 
+Demonstrates:
 
-Four Pillars of OOP
+* Classes
+* Objects
+* Constructors
+* Instance variables
 
-Encapsulation
+data_types.py
 
-Hiding data and controlling access.
+Demonstrates:
 
-Inheritance
+* String
+* Integer
+* Float
+* Boolean
 
-One class reuses another class’s properties and methods.
+methods.py
 
-Polymorphism
+Demonstrates:
 
-Same method, different behavior.
+* String methods
+* List methods
+* Dictionary methods
 
-Abstraction
+oops_examples.py
 
-Hide complexity and show only required functionality.
+Demonstrates:
+
+* Encapsulation
+* Abstraction
+* Inheritance
+* Polymorphism
+
+⸻
+
+Concepts Covered
+
+* Python Data Types
+* Classes and Objects
+* Constructors
+* Instance Variables
+* Encapsulation
+* Abstraction
+* Inheritance
+* Polymorphism
+* Type Checking
+* Introspection
+* Collection Operations
+
+⸻
+
+Design Improvements
+
+* Followed Python naming conventions
+* Separated implementation from examples
+* Reused common logic through utility classes
+* Added modular package structure
+* Improved maintainability and readability
