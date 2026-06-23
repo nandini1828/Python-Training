@@ -10,9 +10,9 @@ class SimpleQueue:
         self.items.append(item)
 
     def dequeue(self):
-        """Remove and return the item at the front of the queue."""
+        """Remove and return the item at the front of the queue, or None if empty."""
         if not self.items:
-            raise IndexError("dequeue from empty queue")
+            return None
         return self.items.pop(0)
 
     def size(self):
