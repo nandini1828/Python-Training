@@ -1,3 +1,45 @@
-def get_method_names(obj):
-    """Return callable method names on an object excluding dunder methods."""
-    return [name for name in dir(obj) if callable(getattr(obj, name)) and not name.startswith("__")]
+"""
+Method Inspector
+
+Provides functionality to extract
+all public methods from any object.
+"""
+
+
+class MethodInspector:
+
+    @staticmethod
+    def get_methods(obj) -> list[str]:
+        """
+        Returns all public callable methods
+        from the given object.
+
+        Parameters
+        ----------
+        obj : object
+            Any Python object.
+
+        Returns
+        -------
+        list[str]
+            List of public method names.
+        """
+
+        methods = []
+
+        for attribute_name in dir(obj):
+
+            if attribute_name.startswith("_"):
+                continue
+
+            attribute = getattr(
+                obj,
+                attribute_name
+            )
+
+            if callable(attribute):
+                methods.append(
+                    attribute_name
+                )
+
+        return methods

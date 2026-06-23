@@ -1,3 +1,57 @@
-def get_docstrings(obj):
-    """Return a mapping of public attribute names to their docstrings."""
-    return {name: getattr(getattr(obj, name), "__doc__", None) for name in dir(obj) if not name.startswith("__")}
+"""
+Documentation Inspector
+
+Provides functionality to retrieve
+method documentation from any object.
+"""
+
+from .method_inspector import MethodInspector
+
+
+class DocumentationInspector:
+
+    @staticmethod
+    def inspect(obj) -> dict:
+        """
+        Returns method names and their
+        associated documentation.
+
+        Parameters
+        ----------
+        obj : object
+            Any Python object.
+
+        Returns
+        -------
+        dict
+            Object metadata and method details.
+        """
+
+        method_details = []
+
+        for method_name in (
+            MethodInspector.get_methods(obj)
+        ):
+
+            method = getattr(
+                obj,
+                method_name
+            )
+
+            method_details.append(
+                {
+                    "method_name": method_name,
+                    "documentation":
+                        method.__doc__
+                        or "No documentation available"
+                }
+            )
+
+        return {
+            "object_type": type(obj).__name__,
+            "object_id": id(obj),
+            "total_methods": len(
+                method_details
+            ),
+            "methods": method_details
+        }

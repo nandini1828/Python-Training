@@ -1,2 +1,6 @@
-from .method_inspector import get_method_names
-from .documentation_inspector import get_docstrings
+"""
+Inspector Package
+"""
+
+from .method_inspector import MethodInspector
+from .documentation_inspector import DocumentationInspector
