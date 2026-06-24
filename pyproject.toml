@@ -1,0 +1,22 @@
+[project]
+name = "python_datatypes"
+version = "0.1.0"
+description = "A professional Python learning package demonstrating introspection, JSON query engines, collection utilities, composition, and advanced Python techniques."
+authors = [
+  { name = "Python Architect", email = "architect@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.dependencies]
+pytest = "^8.0"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

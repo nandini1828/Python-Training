@@ -1,5 +1,1 @@
-fastapi
-uvicorn
-pydantic
-python-multipart
-email-validator
+pytest>=8.0
