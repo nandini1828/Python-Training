@@ -1,6 +1,6 @@
 import argparse
 
-from exercises.json_query import (
+from exercises.nested_json_query_engine import (
     NestedJSONQueryEngine
 )
 

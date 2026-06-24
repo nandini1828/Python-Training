@@ -15,10 +15,9 @@ from classes.object_deconstructor import deconstruct_object
 from classes.student import Student
 from exercises.queue import demo_queue_operations
 from exercises.tag_merger import demo_merge_tags
-from exercises.json_query import demo_json_query
+from exercises.nested_json_query_engine import demo_json_query
 from exercises.word_counter import word_count
-from inspectors.method_inspector import get_method_names
-from inspectors.documentation_inspector import get_docstrings
+from inspectors.object_inspector import get_method_names, get_docstrings
 
 def main():
     """Run demo operations for every imported helper and class."""

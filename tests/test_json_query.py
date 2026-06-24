@@ -1,11 +1,63 @@
-from collection_utils.dict_utils import query_json
+from exercises.nested_json_query_engine import (
+    NestedJSONQueryEngine
+)
 
 
-def test_query_json_found_key():
-    data = {"user": {"profile": {"name": "Alice"}}}
-    assert query_json(data, "user.profile.name") == "Alice"
+def test_valid_path():
+
+    data = {
+        "user": {
+            "profile": {
+                "name": "Karthik"
+            }
+        }
+    }
+
+    engine = NestedJSONQueryEngine()
+
+    assert (
+        engine.query(
+            data,
+            "user.profile.name"
+        )
+        == "Karthik"
+    )
 
 
-def test_query_json_missing_key_returns_default():
-    data = {"user": {"profile": {"name": "Alice"}}}
-    assert query_json(data, "user.profile.age", 18) == 18
+def test_invalid_path():
+
+    data = {
+        "user": {}
+    }
+
+    engine = NestedJSONQueryEngine()
+
+    assert (
+        engine.query(
+            data,
+            "user.profile.age",
+            18
+        )
+        == 18
+    )
+
+
+def test_list_support():
+
+    data = {
+        "users": [
+            {
+                "name": "Karthik"
+            }
+        ]
+    }
+
+    engine = NestedJSONQueryEngine()
+
+    assert (
+        engine.query(
+            data,
+            "users.0.name"
+        )
+        == "Karthik"
+    )
