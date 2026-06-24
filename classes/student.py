@@ -1,3 +1,5 @@
+# Before Type annotations
+
 class Student:
     """Represents a student with a name and a list of numeric grades."""
 
@@ -9,3 +11,26 @@ class Student:
     def average_grade(self):
         """Return the average of the stored grades."""
         return sum(self.grades) / len(self.grades)
+    
+
+# After type annotations
+
+class Student:
+    def __init__(
+        self,
+        name: str,
+        grades: list[int]
+    ) -> None:
+
+        self.name = name
+        self.grades = grades
+
+    def average_grade(
+        self
+    ) -> float:
+
+        return (
+            sum(self.grades)
+            / len(self.grades)
+        )
+
