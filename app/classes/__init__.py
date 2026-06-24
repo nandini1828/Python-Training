@@ -8,7 +8,7 @@ classes, inheritance, composition, and class management.
 from .student import Student
 from .employee import Employee
 from .department import Department
-from .composition import Company, Address
+from .composition import Company, Address, Office
 from .class_manager import ClassManager
 
 __all__ = [
@@ -17,5 +17,6 @@ __all__ = [
     "Department",
     "Company",
     "Address",
+    "Office",
     "ClassManager",
 ]

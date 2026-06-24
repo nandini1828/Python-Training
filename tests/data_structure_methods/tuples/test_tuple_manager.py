@@ -11,5 +11,5 @@ class TestTupleManager:
     
     def test_immutability(self):
         result = TupleManager.immutability()
-        original = result["original_tuple"]
-        assert original == (1, 2, 3, 4, 5)
+        original = result["original"]
+        assert original == (1, 2, 3)

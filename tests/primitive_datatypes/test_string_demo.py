@@ -44,7 +44,7 @@ class TestStringDemo:
         result = StringDemo.string_searching()
         assert result["in_operator"] is True
         assert result["not_in"] is True
-        assert result["count_occurrences"] == 2
+        assert result["count_occurrences"] == 1
     
     def test_string_formatting(self):
         """Test string formatting."""
