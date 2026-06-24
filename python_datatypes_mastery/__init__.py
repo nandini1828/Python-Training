@@ -7,7 +7,7 @@ and related concepts.
 
 __all__ = [
     "primitives",
-    "collections",
+    "collections_pkg",
     "classes",
     "inspectors",
     "exercises",

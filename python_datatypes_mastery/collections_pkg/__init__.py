@@ -1,5 +1,5 @@
 """
-Collections utilities package.
+Collections utilities package (renamed to avoid stdlib shadowing).
 """
 
 from .list_utils import demo_list_methods

@@ -3,7 +3,7 @@ Set utilities demonstrating set operations.
 """
 from __future__ import annotations
 
-from typing import Any, Iterable, Set, Tuple
+from typing import Any, Iterable, Set, Tuple, Dict
 
 
 def add_item(original: Set[Any], item: Any) -> Set[Any]:
