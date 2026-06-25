@@ -1,22 +1,29 @@
 # Dictionary Methods
 
-## Concept Overview
-This package highlights common dictionary operations that are useful in real-world data processing.
+## What this folder contains
+This folder explains dictionaries, which store data as key-value pairs. Dictionaries are one of the most important data structures in Python because they allow fast lookup by name or key.
 
-## Why It Exists
-Dictionaries are central to Python data modeling. These utilities make common transformations easier to reuse.
+## What the code demonstrates
+The dictionary utilities show how to:
+- add new key-value pairs
+- retrieve values safely
+- remove keys
+- update existing data
+- list all keys, values, or items
+- merge dictionaries
+- filter values by a condition
 
-## Real World Use Cases
-- Configuration parsing
-- Data normalization
-- Aggregating values by key
+## Why this is important
+Dictionaries are used in Python for configuration files, API responses, user data, and many other real-world tasks.
 
-## Example Code
+## Example
 ```python
-from dictionary_methods.dictionary_utils import merge_dictionaries
+from dictionary_methods.dictionary_utils import add_item, get_value
 
-merged = merge_dictionaries({"a": 1}, {"b": 2})
+student = {"name": "Ada"}
+add_item(student, "age", 21)
+age = get_value(student, "age")
 ```
 
-## Expected Output
-A merged dictionary containing the combined key-value pairs.
+## What a viewer should understand after reading this folder
+A viewer should understand that dictionaries are perfect for storing related pieces of data using meaningful names.

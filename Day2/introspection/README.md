@@ -1,23 +1,26 @@
 # Introspection
 
-## Concept Overview
-This package shows how Python can inspect objects at runtime to discover behavior and structure.
+## What this folder contains
+This folder explains introspection, which means looking inside an object to understand what it is and what it can do.
 
-## Why It Exists
-Introspection is essential for debugging, framework development, and building reusable tooling.
+## What the code demonstrates
+The introspection utilities show how to:
+- inspect an object and identify its type
+- list its methods and attributes
+- extract documentation strings from Python objects
+- understand how Python exposes internal information at runtime
 
-## Real World Use Cases
-- Debugging object state
-- Building generic serializers
-- Inspecting plugin systems
+## Why this is important
+Introspection is useful for debugging, learning Python, and building tools that work with unknown objects dynamically.
 
-## Example Code
+## Example
 ```python
-from introspection.introspection_utils import inspect_object, query_json
+from introspection.introspection_utils import inspect_object
 
 summary = inspect_object([1, 2, 3])
-value = query_json({"user": {"name": "Ada"}}, "user.name")
+print(summary["kind"])
+print(summary["methods"])
 ```
 
-## Expected Output
-Structured metadata about the inspected object and a value extracted from a nested JSON-like structure.
+## What a viewer should understand after reading this folder
+A viewer should understand that Python can reveal information about objects and help developers explore them interactively.

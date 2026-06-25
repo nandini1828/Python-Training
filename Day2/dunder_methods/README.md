@@ -1,24 +1,25 @@
 # Dunder Methods
 
-## Concept Overview
-This package demonstrates Python's special methods, also known as dunder methods, which allow objects to behave like built-in types.
+## What this folder contains
+This folder explains dunder methods, which are Python's special methods that begin and end with double underscores. These methods allow classes to behave more like built-in Python objects.
 
-## Why It Exists
-Dunder methods make classes more Pythonic and enable rich behaviors such as string conversion, equality comparison, and ordering.
+## What the code demonstrates
+The dunder examples show how classes can define behavior for:
+- string conversion with __str__
+- object representation with __repr__
+- comparison and equality behavior
 
-## Real World Use Cases
-- Custom value objects
-- Domain models
-- Data containers and comparables
+## Why this is important
+Dunder methods are a key part of Python's object model and are used heavily in framework and library development.
 
-## Example Code
+## Example
 ```python
 from dunder_methods.dunder_utils import DunderDemo
 
 person = DunderDemo("Ada", 37)
-print(repr(person))
 print(str(person))
+print(repr(person))
 ```
 
-## Expected Output
-A human-readable string and a developer-friendly representation of the object.
+## What a viewer should understand after reading this folder
+A viewer should understand that dunder methods let custom classes integrate naturally with Python's built-in behavior.
