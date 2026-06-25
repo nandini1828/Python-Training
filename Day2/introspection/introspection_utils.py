@@ -1,114 +1,53 @@
 from __future__ import annotations
 
 import inspect
-import logging
-from typing import Any, Dict, List, Sequence, Union
+from typing import Any, Dict, List
 
-logger = logging.getLogger(__name__)
+
+class IntrospectionHelper:
+    """A simple helper that shows how Python can inspect objects."""
+
+    def __init__(self, target: Any) -> None:
+        self.target = target
+
+    def inspect(self) -> Dict[str, Any]:
+        """Return a simple summary of the object."""
+        kind = self._find_kind()
+        attributes = [name for name in dir(self.target) if not name.startswith("__")]
+        methods = [name for name in dir(self.target) if callable(getattr(self.target, name)) and not name.startswith("__")]
+
+        return {
+            "kind": kind,
+            "type_name": type(self.target).__name__,
+            "is_callable": callable(self.target),
+            "attributes": sorted(attributes),
+            "methods": methods,
+        }
+
+    def _find_kind(self) -> str:
+        """Return a simple label for the object's type."""
+        if inspect.isfunction(self.target) or inspect.ismethod(self.target) or inspect.isbuiltin(self.target):
+            return "function"
+        if inspect.isclass(self.target):
+            return "class"
+        if isinstance(self.target, (list, tuple, set, dict, str, int, float, bool)):
+            return type(self.target).__name__
+        return "instance"
 
 
 def inspect_object(target: Any) -> Dict[str, Any]:
-    """Return a structured summary of an object's runtime characteristics."""
-
-    logger.info("Inspecting object of type %s", type(target).__name__)
-    kind = "unknown"
-    if isinstance(target, str):
-        kind = "str"
-    elif isinstance(target, int):
-        kind = "int"
-    elif isinstance(target, float):
-        kind = "float"
-    elif isinstance(target, list):
-        kind = "list"
-    elif isinstance(target, tuple):
-        kind = "tuple"
-    elif isinstance(target, set):
-        kind = "set"
-    elif isinstance(target, dict):
-        kind = "dict"
-    elif inspect.isfunction(target) or inspect.ismethod(target) or inspect.isbuiltin(target):
-        kind = "function"
-    elif inspect.isclass(target):
-        kind = "class"
-    elif inspect.isroutine(target):
-        kind = "routine"
-    else:
-        kind = "instance"
-
-    signature = None
-    try:
-        signature = str(inspect.signature(target))
-    except (TypeError, ValueError):
-        signature = None
-
-    attributes = sorted([name for name in dir(target) if not name.startswith("__")])
-    if inspect.isfunction(target) or inspect.ismethod(target) or inspect.isbuiltin(target):
-        attributes = sorted(["__name__", "__module__", *attributes])
-
-    methods_with_docs = {
-        name: inspect.getdoc(getattr(target, name))
-        for name in dir(target)
-        if callable(getattr(target, name)) and not name.startswith("__")
-    }
-
-    return {
-        "kind": kind,
-        "type_name": type(target).__name__,
-        "is_callable": callable(target),
-        "attributes": attributes,
-        "instance_attributes": sorted([name for name in vars(target).keys()]) if hasattr(target, "__dict__") else [],
-        "methods": list_available_methods(target),
-        "methods_with_docs": methods_with_docs,
-        "signature": signature,
-        "doc": inspect.getdoc(target),
-    }
+    """Inspect an object using a beginner-friendly helper."""
+    return IntrospectionHelper(target).inspect()
 
 
 def extract_documentation(target: Any) -> Dict[str, Any]:
-    """Return the docstrings attached to an object, module, class, and methods."""
-
-    logger.info("Extracting documentation for %s", getattr(target, "__name__", type(target).__name__))
+    """Return the docstrings attached to an object."""
     return {
         "docstring": inspect.getdoc(target),
         "module_docstring": inspect.getmodule(target).__doc__ if inspect.getmodule(target) else None,
-        "class_docstring": inspect.getdoc(type(target)) if inspect.isclass(target) else None,
-        "method_docstrings": {
-            name: inspect.getdoc(getattr(target, name))
-            for name in dir(target)
-            if callable(getattr(target, name)) and not name.startswith("__")
-        },
     }
 
 
 def list_available_methods(target: Any) -> List[str]:
-    """Return all callable methods and functions exposed by an object."""
-
-    logger.info("Listing methods for %s", type(target).__name__)
+    """Return all callable methods exposed by an object."""
     return [name for name in dir(target) if callable(getattr(target, name)) and not name.startswith("__")]
-
-
-def query_json(payload: Any, path: Union[str, Sequence[str], None]) -> Any:
-    """Safely query nested JSON-like structures using dot notation or sequence paths."""
-
-    logger.info("Querying JSON path %s", path)
-    if path is None:
-        return None
-
-    if isinstance(path, str):
-        parts = [segment for segment in path.split(".") if segment]
-    else:
-        parts = [segment for segment in path if segment]
-
-    current: Any = payload
-    for part in parts:
-        if isinstance(current, dict) and part in current:
-            current = current[part]
-        elif isinstance(current, list) and part.isdigit():
-            index = int(part)
-            if 0 <= index < len(current):
-                current = current[index]
-            else:
-                return None
-        else:
-            return None
-    return current

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from introspection.introspection_utils import extract_documentation, inspect_object, query_json
+from introspection.introspection_utils import extract_documentation, inspect_object
 
 
 class Book:
@@ -19,10 +19,8 @@ def run_introspection_demo() -> None:
     book = Book("Python Basics")
     summary = inspect_object(book)
     documentation = extract_documentation(Book.read)
-    query_result = query_json({"book": {"title": "Python Basics"}}, "book.title")
 
     print("Object kind:", summary["kind"])
     print("Attributes:", summary["attributes"])
     print("Methods:", summary["methods"])
     print("Docstring:", documentation["docstring"])
-    print("JSON value:", query_result)
