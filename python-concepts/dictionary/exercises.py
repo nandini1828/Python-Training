@@ -2,14 +2,20 @@
 Exercise Solutions - Section 4
 """
 
+from typing import Any, Dict, Optional
 
-def query_json(data_dict, path_str, default=None):
+
+def query_json(
+    data_dict: Dict[str, Any],
+    path_str: str,
+    default: Optional[Any] = None
+) -> Any:
     """
     Exercise 4.1
     Query nested dictionaries using dot notation.
     """
 
-    current = data_dict
+    current: Any = data_dict
 
     for key in path_str.split("."):
 
@@ -22,7 +28,7 @@ def query_json(data_dict, path_str, default=None):
     return current
 
 
-def word_count(text):
+def word_count(text: str) -> Dict[str, int]:
     """
     Exercise 4.2
     Count word frequency.
@@ -30,14 +36,14 @@ def word_count(text):
 
     text = text.lower()
 
-    punctuation = ".,!?"
+    punctuation: str = ".,!?"
 
     for symbol in punctuation:
         text = text.replace(symbol, "")
 
-    words = text.split()
+    words: list[str] = text.split()
 
-    frequency = {}
+    frequency: Dict[str, int] = {}
 
     for word in words:
         frequency[word] = frequency.get(word, 0) + 1

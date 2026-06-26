@@ -1,226 +1,171 @@
 """
-Python Data Types: The Exhaustive Mastery Guide
-Main Driver Program
+main.py
+
+Entry point for Python Concepts Training Project
 """
 
-# Section 1
-from section1 import (
+from Introspection.introspection import (
+    get_object_type,
+    get_object_id,
     inspect_object,
-    list_public_attributes,
-    dunder_rewrite
+    list_public_attributes
 )
 
-# Section 2
-from section2 import (
-    safe_cast,
-    count_truthy_falsy
+from Introspection.exercises import (
+    dunder_rewrite,
+    demonstrate_naming_conventions
 )
 
-# Section 3
-from section3 import (
-    SimpleQueue,
-    merge_tags
+from type_casting.type_casting import (
+    check_exact_type,
+    check_instance,
+    Animal,
+    Dog,
+    demonstrate_casting_examples
 )
 
-# Section 4
-from section4 import (
-    query_json,
-    word_count
+from type_casting.exercises import (
+    count_truthy_falsy,
+    safe_conversion_examples
 )
 
-# Section 5
-from section5 import (
-    Student,
-    create_student_without_init,
-    deconstruct_object
+from dictionary.dictionaries_json import (
+    DictionaryOperations,
+    JsonOperations
 )
 
+# Add these imports after creating collections/oop files
+# from collections.exercises import SimpleQueue, merge_tags
+# from oop_memory.exercises import deconstruct_object
 
-def run_section1():
+
+def run_introspection_demo():
 
     print("\n" + "=" * 50)
     print("SECTION 1: INTROSPECTION")
     print("=" * 50)
 
-    number = 100
+    x = 100
 
-    print("\nInspect Object:")
-    print(inspect_object(number))
+    print("Type:", get_object_type(x))
+    print("ID:", get_object_id(x))
 
     print("\nPublic Attributes:")
-    print(list_public_attributes("Python"))
+    print(list_public_attributes([])[:10])
+
+    print("\nInspect Object:")
+    print(inspect_object("Python"))
 
     print("\nDunder Rewrite:")
     print(dunder_rewrite())
 
-
-def run_section2():
-
-    print("\n" + "=" * 50)
-    print("SECTION 2: TYPE CHECKING & CASTING")
-    print("=" * 50)
-
-    print("\nSafe Casting:")
-
-    print(
-        safe_cast(
-            "12.5",
-            float
-        )
-    )
-
-    print(
-        safe_cast(
-            "12.5",
-            int
-        )
-    )
-
-    print(
-        safe_cast(
-            "abc",
-            int,
-            default=0
-        )
-    )
-
-    items = [
-        0,
-        "hello",
-        [],
-        None,
-        True,
-        3.14
-    ]
-
-    print("\nTruthy/Falsy Count:")
-    print(count_truthy_falsy(items))
+    print("\nNaming Conventions:")
+    print(demonstrate_naming_conventions())
 
 
-def run_section3():
+def run_casting_demo():
 
     print("\n" + "=" * 50)
-    print("SECTION 3: LISTS, TUPLES & SETS")
+    print("SECTION 2: TYPE CASTING")
     print("=" * 50)
 
-    queue = SimpleQueue()
+    dog = Dog()
 
-    queue.enqueue(10)
-    queue.enqueue(20)
-    queue.enqueue(30)
-
-    print("\nQueue Size:")
-    print(queue.size())
-
-    print("\nDequeued Item:")
-    print(queue.dequeue())
-
-    print("\nQueue Size:")
-    print(queue.size())
-
-    tags_a = [
-        "Python",
-        "Java",
-        "AI"
-    ]
-
-    tags_b = [
-        "python",
-        "ML",
-        "AI"
-    ]
-
-    print("\nMerged Tags:")
     print(
-        merge_tags(
-            tags_a,
-            tags_b
+        "Exact Type Check:",
+        check_exact_type(dog, Animal)
+    )
+
+    print(
+        "Instance Check:",
+        check_instance(dog, Animal)
+    )
+
+    print("\nCasting Examples:")
+    print(demonstrate_casting_examples())
+
+    print("\nSafe Conversion Examples:")
+    print(safe_conversion_examples())
+
+    print("\nTruthiness Auditor:")
+    print(
+        count_truthy_falsy(
+            [0, "", [], None, True, 3.14]
         )
     )
 
 
-def run_section4():
+def run_dictionary_demo():
 
     print("\n" + "=" * 50)
     print("SECTION 4: DICTIONARIES & JSON")
     print("=" * 50)
 
     data = {
-        "user": {
-            "profile": {
-                "name": "Alice"
-            }
-        }
+        "name": "Alice",
+        "age": 22
     }
 
-    print("\nQuery JSON:")
     print(
-        query_json(
+        "Get:",
+        DictionaryOperations.get_value(
             data,
-            "user.profile.name"
+            "name"
         )
     )
 
     print(
-        query_json(
-            data,
-            "user.profile.age",
-            18
+        "Keys:",
+        DictionaryOperations.get_keys(
+            data
         )
     )
 
-    text = """
-    Python is great.
-    Python is easy!
+    print(
+        "Values:",
+        DictionaryOperations.get_values(
+            data
+        )
+    )
+
+    print(
+        "Items:",
+        DictionaryOperations.get_items(
+            data
+        )
+    )
+
+    json_string = """
+    {
+        "name": "Alice",
+        "city": "Hyderabad"
+    }
     """
 
-    print("\nWord Count:")
-    print(word_count(text))
-
-
-def run_section5():
-
-    print("\n" + "=" * 50)
-    print("SECTION 5: CLASSES & MEMORY")
-    print("=" * 50)
-
-    student = Student(
-        "Vyshu",
-        [90, 95, 85]
+    print("\nJSON To Dict:")
+    print(
+        JsonOperations.json_to_dictionary(
+            json_string
+        )
     )
 
-    print("\nStudent Dictionary:")
-    print(student.__dict__)
-
-    print("\nAverage Grade:")
-    print(student.average_grade())
-
-    print("\nCreate Student Without __init__:")
-    print(create_student_without_init())
-
-    print("\nDeconstruct Object:")
     print(
-        deconstruct_object(
-            student
+        "\nValid JSON:",
+        JsonOperations.is_valid_json(
+            json_string
         )
     )
 
 
 def main():
 
-    run_section1()
+    run_introspection_demo()
 
-    run_section2()
+    run_casting_demo()
 
-    run_section3()
+    run_dictionary_demo()
 
-    run_section4()
-
-    run_section5()
-
-    print("\n" + "=" * 50)
-    print("ALL SECTIONS EXECUTED SUCCESSFULLY")
-    print("=" * 50)
+    print("\nProject Execution Completed")
 
 
 if __name__ == "__main__":
