@@ -1,0 +1,23 @@
+{
+  "user": {
+    "id": 123,
+    "name": "Alice",
+    "address": {
+      "city": "Metropolis",
+      "street": "Main St",
+      "zip": "12345"
+    },
+    "emails": [
+      "alice@example.com",
+      "alice.work@example.com"
+    ]
+  },
+  "employees": [
+    {"name": "Bob", "role": "engineer"},
+    {"name": "Carol", "role": "designer"}
+  ],
+  "meta": {
+    "version": "1.0",
+    "source": "generated"
+  }
+}
