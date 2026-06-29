@@ -1,0 +1,12 @@
+{% extends 'students/base.html' %}
+{% block title %}{{ student.first_name }} {{ student.last_name }}{% endblock %}
+{% block content %}
+<div class="card">
+    <h1>{{ student.first_name }} {{ student.last_name }}</h1>
+    <p><strong>Age:</strong> {{ student.age }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Course:</strong> {{ student.course }}</p>
+    <a class="btn btn-primary" href="{% url 'students:student_edit' student.pk %}">Edit</a>
+    <a class="btn btn-danger" href="{% url 'students:student_delete' student.pk %}">Delete</a>
+</div>
+{% endblock %}

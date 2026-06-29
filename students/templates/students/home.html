@@ -1,0 +1,10 @@
+{% extends 'students/base.html' %}
+{% block title %}StudentHub | Home{% endblock %}
+{% block content %}
+<div class="hero">
+    <h1>Welcome to StudentHub</h1>
+    <p>Manage students, courses, and APIs in one polished Django application.</p>
+    <a class="btn btn-primary" href="{% url 'students:student_list' %}">View Students</a>
+    <a class="btn btn-secondary" href="/admin/">Open Admin</a>
+</div>
+{% endblock %}

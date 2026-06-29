@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}StudentHub{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f7fb; color: #223; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08); margin-bottom: 20px; }
+        nav { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: white; padding: 16px 24px; }
+        nav a { color: white; text-decoration: none; margin-right: 14px; font-weight: 600; }
+        .btn { display: inline-block; padding: 10px 16px; border-radius: 8px; text-decoration: none; margin-right: 8px; }
+        .btn-primary { background: #2563eb; color: white; }
+        .btn-danger { background: #dc2626; color: white; }
+        .btn-secondary { background: #e5e7eb; color: #111827; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+        .messages { list-style: none; padding: 0; }
+        .messages li { background: #dcfce7; padding: 10px; border-radius: 8px; margin-bottom: 8px; }
+        form input, form select, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #cbd5e1; border-radius: 8px; }
+        .hero { text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <div><strong>StudentHub</strong></div>
+            <div>
+                <a href="{% url 'students:home' %}">Home</a>
+                <a href="{% url 'students:student_list' %}">Students</a>
+                <a href="/admin/">Admin</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
