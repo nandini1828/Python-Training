@@ -25,3 +25,4 @@ def list_statistics(values: Sequence[Any]) -> Dict[str, int]:
         "unique": len(set(values)),
         "pages": ((len(values) - 1) // 10) + 1 if values else 0,
     }
+
