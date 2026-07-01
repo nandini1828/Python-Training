@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Reservation Confirmed</title>
+    <link rel="stylesheet" href="{% static 'booking/style.css' %}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-mark">Hotel</span>
+                <span>StayEase</span>
+            </div>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="#details">Details</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero hero-small">
+            <div>
+                <p class="eyebrow">Booking confirmed</p>
+                <h1>Your reservation is confirmed.</h1>
+                <p>Thank you for booking with StayEase. Your stay details are below.</p>
+            </div>
+        </section>
+
+        {% if messages %}
+            <div class="message-list">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <section id="details" class="section-block confirmation-block">
+            <div class="confirmation-card">
+                <img src="{% static reservation.room.image_url %}" alt="Room image" class="confirmation-image">
+                <div class="confirmation-info">
+                    <p class="eyebrow">Reservation details</p>
+                    <h2>Room {{ reservation.room.room_number }} — {{ reservation.room.get_room_type_display }}</h2>
+                    <p><strong>Guest:</strong> {{ reservation.guest.name }}</p>
+                    <p><strong>Email:</strong> {{ reservation.guest.email }}</p>
+                    <p><strong>Phone:</strong> {{ reservation.guest.phone|default:'Not provided' }}</p>
+                    <p><strong>Dates:</strong> {{ reservation.check_in }} to {{ reservation.check_out }}</p>
+                    <p><strong>Status:</strong> {{ reservation.get_status_display }}</p>
+                    <p class="price-note">Total price: <strong>${{ reservation.room.price }}</strong> per night</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-block contact-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Need help?</p>
+                    <h2>Contact our support team</h2>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p>support@stayease.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Phone</h3>
+                    <p>+1 (800) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Office</h3>
+                    <p>123 Harbor Ave, Suite 400, Miami, FL</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <div>
+                <p class="brand">StayEase</p>
+                <p class="footer-line">Delivering premium hospitality experiences with trusted hotel booking solutions.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#details">Reservation</a>
+                <a href="#contact">Contact</a>
+                <a href="mailto:support@stayease.com">Email us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Reservations</title>
+    <link rel="stylesheet" href="{% static 'booking/style.css' %}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-mark">Hotel</span>
+                <span>StayEase Admin</span>
+            </div>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </nav>
+        </header>
+
+        <section class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Admin dashboard</p>
+                    <h2>Pending Booking Requests</h2>
+                </div>
+            </div>
+
+            {% if messages %}
+                <div class="message-list">
+                    {% for message in messages %}
+                        <div class="message {{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if pending_requests %}
+                <div class="reservation-list">
+                    {% for reservation in pending_requests %}
+                        <div class="reservation-item admin-item">
+                            <p><strong>{{ reservation.guest.name }}</strong> — {{ reservation.room.room_number }} ({{ reservation.room.get_room_type_display }})</p>
+                            <p>{{ reservation.check_in }} → {{ reservation.check_out }}</p>
+                            <p>{{ reservation.guest.email }} | {{ reservation.guest.phone|default:'No phone' }}</p>
+                            <div class="admin-actions">
+                                <form method="post" action="{% url 'manage_reservation_action' reservation.id 'approve' %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-primary">Approve</button>
+                                </form>
+                                <form method="post" action="{% url 'manage_reservation_action' reservation.id 'reject' %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-secondary">Reject</button>
+                                </form>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No pending booking requests.</p>
+            {% endif %}
+        </section>
+
+        <section class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">History</p>
+                    <h2>Recent Reservations</h2>
+                </div>
+            </div>
+            {% if recent_reservations %}
+                <div class="reservation-list">
+                    {% for reservation in recent_reservations %}
+                        <div class="reservation-item">
+                            <p><strong>{{ reservation.guest.name }}</strong> — {{ reservation.room.room_number }}</p>
+                            <p>{{ reservation.check_in }} → {{ reservation.check_out }}</p>
+                            <span class="status-pill">{{ reservation.get_status_display }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No reservations found.</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+:root {
+    color-scheme: light;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #0f172a;
+    background: #eef2ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: radial-gradient(circle at top, #eef2ff 0%, #dbeafe 44%, #f8fafc 100%);
+    color: #0f172a;
+}
+
+.page-shell {
+    width: min(1200px, 100% - 32px);
+    margin: 0 auto;
+    padding: 28px 0 64px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+
+.brand-mark {
+    color: #4338ca;
+}
+
+.topbar nav a {
+    color: #334155;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 0.95rem;
+}
+
+.hero {
+    display: grid;
+    gap: 24px;
+    padding: 32px;
+    margin-bottom: 32px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.hero p.eyebrow,
+.section-heading .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: #4e38ca;
+    margin: 0 0 10px;
+}
+
+.hero h1,
+.section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.05;
+}
+
+.hero p {
+    max-width: 58ch;
+    margin: 18px 0 0;
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.hero-card {
+    padding: 24px;
+    border-radius: 22px;
+    background: #389cca;
+    color: white;
+    box-shadow: 0 24px 40px rgba(67, 56, 202, 0.18);
+}
+
+.section-block {
+    margin-bottom: 32px;
+    padding: 28px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.filter-form,
+.booking-form {
+    display: grid;
+    gap: 16px;
+}
+
+.filter-form input,
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+button.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: #4338ca;
+    color: white;
+    box-shadow: 0 16px 30px rgba(67, 56, 202, 0.18);
+}
+
+.btn-secondary {
+    background: #eef2ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+}
+
+.room-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.room-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 24px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+}
+
+.room-label {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.room-type {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.room-price {
+    font-weight: 700;
+    color: #4338ca;
+}
+
+.message.success {
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background: #e0f2fe;
+    border-left: 4px solid #0ea5e9;
+    color: #0b1f44;
+    border-radius: 14px;
+}
+
+.reservation-list {
+    display: grid;
+    gap: 14px;
+}
+
+.reservation-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.status-pill {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0c4a6e;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.empty-state {
+    color: #64748b;
+    font-style: italic;
+}
+
+.room-card img,
+.confirmation-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.confirmation-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 24px;
+    border-radius: 28px;
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 24px 40px rgba(15, 23, 42, 0.08);
+}
+
+.hero-small {
+    padding: 28px;
+}
+
+.confirmation-info {
+    display: grid;
+    gap: 12px;
+}
+
+.price-note {
+    font-size: 1rem;
+    color: #1d4ed8;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.contact-card,
+.page-footer {
+    padding: 24px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.contact-card h3,
+.page-footer .brand {
+    margin: 0 0 10px;
+    color: #1e293b;
+}
+
+.contact-card p,
+.footer-line {
+    margin: 0;
+    color: #475569;
+}
+
+.page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: #4338ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .confirmation-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .section-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .room-card img,
+    .confirmation-image {
+        height: 180px;
+    }
+}

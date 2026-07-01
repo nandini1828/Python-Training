@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Hotel Management</title>
+    <link rel="stylesheet" href="{% static 'booking/style.css' %}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-mark">Hotel</span>
+                <span>StayEase</span>
+            </div>
+            <nav>
+                <a href="#search">Find rooms</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#reservations">Recent stays</a>
+                <a href="{% url 'login' %}">Admin login</a>
+            </nav>
+        </header>
+
+        {% if messages %}
+            <div class="message-list">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">Premium hotel booking</p>
+                <h1>Find the perfect stay for your next trip</h1>
+                <p>Book rooms with ease, check availability, and manage reservations from one simple page.</p>
+            </div>
+            <div class="hero-card">
+                <p><strong>Start by searching available rooms.</strong></p>
+                <p>Then choose a room and submit your booking details.</p>
+            </div>
+        </section>
+
+        {% if booked %}
+            <div class="message success">Your booking request is confirmed.</div>
+        {% endif %}
+
+        <section id="search" class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Search today</p>
+                    <h2>Search Rooms</h2>
+                </div>
+            </div>
+            <form method="get" class="filter-form">
+                {{ filter_form.as_p }}
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </section>
+
+        <section id="rooms" class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Available stays</p>
+                    <h2>Available Rooms</h2>
+                </div>
+            </div>
+            {% if rooms %}
+                <div class="room-grid">
+                    {% for room in rooms %}
+                        <article class="room-card">
+                            <div class="room-header">
+                                <div>
+                                    <span class="room-label">Room {{ room.room_number }}</span>
+                                    <p class="room-type">{{ room.get_room_type_display }}</p>
+                                </div>
+                                <p class="room-price">${{ room.price }}</p>
+                            </div>
+                            <form method="post" class="booking-form">
+                                {% csrf_token %}
+                                {{ reservation_form.as_p }}
+                                <input type="hidden" name="room_id" value="{{ room.id }}">
+                                <button type="submit" class="btn btn-secondary">Book this room</button>
+                            </form>
+                        </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No available rooms right now.</p>
+            {% endif %}
+        </section>
+
+        <section id="reservations" class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Guest activity</p>
+                    <h2>Recent Reservations</h2>
+                </div>
+            </div>
+            {% if reservations %}
+                <div class="reservation-list">
+                    {% for reservation in reservations %}
+                        <div class="reservation-item">
+                            <p><strong>{{ reservation.guest.name }}</strong></p>
+                            <p>{{ reservation.room.room_number }} | {{ reservation.check_in }} → {{ reservation.check_out }}</p>
+                            <span class="status-pill">{{ reservation.get_status_display }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No reservations yet.</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>
