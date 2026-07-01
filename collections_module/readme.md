@@ -11,13 +11,3 @@ Topics Covered
 - OrderedDict
 - namedtuple
 
-Target Audience
-
-- Python Beginners
-- College Students
-- Working Professionals
-- Interview Preparation
-
-Estimated Completion Time
-
-1 Hour
