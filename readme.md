@@ -1,17 +1,6 @@
 Python training:
 # Python Datatypes — Enterprise Learning Repository
 
-Architecture diagram (conceptual):
-
-Computer
-├─ composition/     # Composition examples
-├─ introspection/   # Dynamic object analysis engine
-├─ dunder_methods/  # Magic methods examples
-├─ list_methods/    # List utilities
-├─ tuple_methods/   # Tuple utilities
-├─ set_methods/     # Set utilities
-└─ dictionary_methods/ # Dictionary utilities
-
 Installation
 
 ```bash
