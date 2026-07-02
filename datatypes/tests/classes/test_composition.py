@@ -1,6 +1,6 @@
 """Test suite for composition classes."""
 import pytest
-from app.classes import Address, Office, Company
+from datatypes.classes import Address, Office, Company
 
 
 class TestAddress:

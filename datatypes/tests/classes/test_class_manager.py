@@ -1,6 +1,6 @@
 """Test suite for ClassManager."""
 import pytest
-from app.classes import ClassManager
+from datatypes.classes import ClassManager
 
 
 class TestClassManager:

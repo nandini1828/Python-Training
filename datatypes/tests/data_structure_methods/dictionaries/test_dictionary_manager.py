@@ -1,6 +1,6 @@
 """Test suite for dictionary manager."""
 import pytest
-from app.data_structure_methods.dictionaries import DictionaryManager
+from datatypes.data_structure_methods.dictionaries import DictionaryManager
 
 
 class TestDictionaryManager:

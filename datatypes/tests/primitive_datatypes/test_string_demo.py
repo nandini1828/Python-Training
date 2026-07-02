@@ -3,7 +3,7 @@ Test suite for StringDemo class.
 """
 
 import pytest
-from app.primitive_datatypes import StringDemo
+from datatypes.primitive_datatypes import StringDemo
 
 
 class TestStringDemo:

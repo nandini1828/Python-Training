@@ -1,6 +1,6 @@
 """Test suite for introspection modules."""
 import pytest
-from app.introspection import DirectoryExamples, InstanceOfExamples, TypeExamples
+from datatypes.introspection import DirectoryExamples, InstanceOfExamples, TypeExamples
 
 
 class TestDirectoryExamples:

@@ -4,7 +4,7 @@ Test suite for FloatDemo class.
 
 import pytest
 import math
-from app.primitive_datatypes import FloatDemo
+from datatypes.primitive_datatypes import FloatDemo
 
 
 class TestFloatDemo:

@@ -1,6 +1,6 @@
 """Test suite for SafeCast class."""
 import pytest
-from app.type_casting import SafeCast
+from datatypes.type_casting import SafeCast
 
 
 class TestSafeCast:

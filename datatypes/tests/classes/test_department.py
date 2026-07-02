@@ -1,6 +1,6 @@
 """Test suite for Department class."""
 import pytest
-from app.classes import Department, Employee
+from datatypes.classes import Department, Employee
 
 
 class TestDepartment:

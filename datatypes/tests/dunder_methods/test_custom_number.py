@@ -1,6 +1,6 @@
 """Test suite for dunder methods."""
 import pytest
-from app.dunder_methods import CustomNumber, CustomString
+from datatypes.dunder_methods import CustomNumber, CustomString
 
 
 class TestCustomNumber:

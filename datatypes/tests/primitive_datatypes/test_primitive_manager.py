@@ -3,7 +3,7 @@ Test suite for PrimitiveManager class.
 """
 
 import pytest
-from app.primitive_datatypes import PrimitiveManager
+from datatypes.primitive_datatypes import PrimitiveManager
 
 
 class TestPrimitiveManager:

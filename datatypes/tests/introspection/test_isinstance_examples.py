@@ -1,6 +1,6 @@
 """Test suite for isinstance examples."""
 import pytest
-from app.introspection import InstanceOfExamples
+from datatypes.introspection import InstanceOfExamples
 
 
 class TestInstanceOfAdvanced:

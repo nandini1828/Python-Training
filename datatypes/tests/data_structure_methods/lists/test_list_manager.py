@@ -1,9 +1,9 @@
 """Test suite for data structure methods."""
 import pytest
-from app.data_structure_methods.lists import ListManager
-from app.data_structure_methods.tuples import TupleManager
-from app.data_structure_methods.sets import SetManager
-from app.data_structure_methods.dictionaries import DictionaryManager
+from datatypes.data_structure_methods.lists import ListManager
+from datatypes.data_structure_methods.tuples import TupleManager
+from datatypes.data_structure_methods.sets import SetManager
+from datatypes.data_structure_methods.dictionaries import DictionaryManager
 
 
 class TestListManager:

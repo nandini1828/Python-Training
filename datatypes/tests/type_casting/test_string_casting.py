@@ -1,6 +1,6 @@
 """Test suite for StringCasting."""
 import pytest
-from app.type_casting import StringCasting
+from datatypes.type_casting import StringCasting
 
 
 class TestStringCasting:

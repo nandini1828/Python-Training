@@ -1,6 +1,6 @@
 """Test suite for doc inspector."""
 import pytest
-from app.introspection import DocInspector
+from datatypes.introspection import DocInspector
 
 
 class TestDocInspector:

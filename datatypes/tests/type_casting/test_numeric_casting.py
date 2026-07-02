@@ -1,7 +1,7 @@
 """Test suite for NumericCasting."""
 import pytest
 import math
-from app.type_casting import NumericCasting
+from datatypes.type_casting import NumericCasting
 
 
 class TestNumericCasting:

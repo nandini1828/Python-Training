@@ -1,6 +1,6 @@
 """Test suite for comparison and arithmetic examples."""
 import pytest
-from app.dunder_methods import ComparisonExamples, ArithmeticExamples
+from datatypes.dunder_methods import ComparisonExamples, ArithmeticExamples
 
 
 class TestComparisonExamples:

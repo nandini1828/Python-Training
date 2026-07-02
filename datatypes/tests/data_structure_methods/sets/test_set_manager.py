@@ -1,6 +1,6 @@
 """Test suite for set manager."""
 import pytest
-from app.data_structure_methods.sets import SetManager
+from datatypes.data_structure_methods.sets import SetManager
 
 
 class TestSetManager:

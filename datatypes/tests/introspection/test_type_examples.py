@@ -1,6 +1,6 @@
 """Test suite for type examples."""
 import pytest
-from app.introspection import TypeExamples
+from datatypes.introspection import TypeExamples
 
 
 class TestTypeVsIsinstance:

@@ -1,6 +1,6 @@
 """Test suite for BooleanCasting."""
 import pytest
-from app.type_casting import BooleanCasting
+from datatypes.type_casting import BooleanCasting
 
 
 class TestBooleanCasting:

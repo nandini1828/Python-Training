@@ -12,14 +12,14 @@ import subprocess
 import sys
 from typing import Optional
 
-from app.primitive_datatypes import PrimitiveManager
-from app.type_casting import SafeCast, NumericCasting
-from app.introspection import ObjectInspector
-from app.classes import ClassManager
-from app.dunder_methods import CustomNumber, CustomString
-from app.data_structure_methods.lists import ListManager
-from app.data_structure_methods.sets import SetManager
-from app.data_structure_methods.dictionaries import DictionaryManager
+from datatypes.primitive_datatypes import PrimitiveManager
+from datatypes.type_casting import SafeCast, NumericCasting
+from datatypes.introspection import ObjectInspector
+from datatypes.classes import ClassManager
+from datatypes.dunder_methods import CustomNumber, CustomString
+from datatypes.data_structure_methods.lists import ListManager
+from datatypes.data_structure_methods.sets import SetManager
+from datatypes.data_structure_methods.dictionaries import DictionaryManager
 
 
 def parse_args() -> argparse.Namespace:
@@ -65,7 +65,7 @@ def main(args: Optional[argparse.Namespace] = None) -> int:
 
     # Run tests if requested
     if args.run_tests:
-        return _run_pytest(quiet=args.quiet)
+           return _run_pytest(quiet=args.quiet)
 
     # Demo flow
     target = (args.module or "").lower()

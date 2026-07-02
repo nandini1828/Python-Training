@@ -1,6 +1,6 @@
 """Test suite for object inspector."""
 import pytest
-from app.introspection import ObjectInspector
+from datatypes.introspection import ObjectInspector
 
 
 class TestObjectInspector:

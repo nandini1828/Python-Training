@@ -3,7 +3,7 @@ Test suite for BooleanDemo class.
 """
 
 import pytest
-from app.primitive_datatypes import BooleanDemo
+from datatypes.primitive_datatypes import BooleanDemo
 
 
 class TestBooleanDemo:

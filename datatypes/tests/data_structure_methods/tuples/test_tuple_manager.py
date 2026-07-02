@@ -1,6 +1,6 @@
 """Test suite for tuple manager."""
 import pytest
-from app.data_structure_methods.tuples import TupleManager
+from datatypes.data_structure_methods.tuples import TupleManager
 
 
 class TestTupleManager:
