@@ -1,10 +1,10 @@
-# 🐍 Python Control Flow
+# Python Control Flow
 
 A beginner-friendly Python project that demonstrates the fundamentals of **Control Flow** using a **Smart ATM System**. Each topic is implemented with real-world examples to make learning practical and easy to understand.
 
 ---
 
-## 📖 About the Project
+## About the Project
 
 Control flow is one of the most important concepts in programming. It determines how a program makes decisions and executes different blocks of code based on conditions.
 
@@ -21,7 +21,7 @@ Topics covered include:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 control_flow/
@@ -50,7 +50,7 @@ control_flow/
 
 ---
 
-# 🚀 Features
+# Features
 
 - Real-world Smart ATM examples
 - Beginner-friendly code
@@ -62,7 +62,7 @@ control_flow/
 
 ---
 
-# 📚 Topics Covered
+# Topics Covered
 
 ## 1. Conditionals
 
@@ -211,7 +211,7 @@ pytest tests/test_conditionals.py
 
 ---
 
-# 🎯 Learning Objectives
+# Learning Objectives
 
 After completing this project, you will understand:
 
@@ -227,7 +227,7 @@ After completing this project, you will understand:
 
 ---
 
-# 💻 Requirements
+# Requirements
 
 - Python 3.10+
 - pytest (for testing)
@@ -249,7 +249,7 @@ Possible enhancements include:
 
 ---
 
-# 📖 References
+# References
 
 - Python Official Documentation
 - PEP 634 – Structural Pattern Matching
@@ -257,7 +257,7 @@ Possible enhancements include:
 
 ---
 
-# 🤝 Contributing
+# Contributing
 
 Contributions are welcome!
 
@@ -270,6 +270,6 @@ Feel free to:
 
 ---
 
-# 📄 License
+# License
 
 This project is intended for educational purposes.
