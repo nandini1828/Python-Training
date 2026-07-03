@@ -1,4 +1,4 @@
-from data_structure_iteration.set_iteration import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.set_iteration import (
     check_membership_in_list,
     check_membership_in_set,
     iterate_set_items,

@@ -1,4 +1,4 @@
-from conditionals.truthy_falsy import is_truthy, evaluate_truthy_falsy
+from looping_and_ds.python_control_flow_mastery.conditionals.truthy_falsy import is_truthy, evaluate_truthy_falsy
 
 
 def test_empty_list_is_falsy():

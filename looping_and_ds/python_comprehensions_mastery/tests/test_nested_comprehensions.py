@@ -1,4 +1,4 @@
-from comprehensions.nested_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.nested_comprehensions import (
     flatten_matrix,
     build_multiplication_grid,
 )

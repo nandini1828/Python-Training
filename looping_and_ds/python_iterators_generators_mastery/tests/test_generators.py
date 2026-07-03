@@ -1,4 +1,4 @@
-from iterators_generators.generators import (
+from looping_and_ds.python_iterators_generators_mastery.iterators_generators.generators import (
     generate_numbers,
     generate_even_numbers,
 )

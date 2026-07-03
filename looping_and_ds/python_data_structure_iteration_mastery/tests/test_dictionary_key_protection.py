@@ -1,4 +1,4 @@
-from data_structure_iteration.dictionary_key_protection import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.dictionary_key_protection import (
     safe_get_value,
     count_words_with_defaultdict,
 )

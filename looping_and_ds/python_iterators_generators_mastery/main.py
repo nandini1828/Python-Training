@@ -5,9 +5,9 @@ This script imports and exercises iterator and generator-related modules
 in a single runnable demonstration.
 """
 
-from iterators_generators.iterator_protocol import NumberIterator
-from iterators_generators.generators import generate_numbers, generate_even_numbers
-from iterators_generators.generator_expressions import (
+from looping_and_ds.python_iterators_generators_mastery.iterators_generators.iterator_protocol import NumberIterator
+from looping_and_ds.python_iterators_generators_mastery.iterators_generators.generators import generate_numbers, generate_even_numbers
+from looping_and_ds.python_iterators_generators_mastery.iterators_generators.generator_expressions import (
     build_square_generator,
     build_even_generator,
 )

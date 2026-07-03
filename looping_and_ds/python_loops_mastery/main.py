@@ -5,24 +5,24 @@ This script imports and exercises loop-related modules
 in a single runnable demonstration.
 """
 
-from loops.for_loops import (
+from looping_and_ds.python_loops_mastery.loops.for_loops import (
     iterate_list,
     iterate_string,
     iterate_range,
 )
-from loops.while_loops import (
+from looping_and_ds.python_loops_mastery.loops.while_loops import (
     count_with_while,
     sum_until_limit,
 )
-from loops.break_continue import (
+from looping_and_ds.python_loops_mastery.loops.break_continue import (
     find_first_even,
     skip_even_numbers,
 )
-from loops.pass_statement import (
+from looping_and_ds.python_loops_mastery.loops.pass_statement import (
     pass_in_loop_demo,
     pass_in_condition_demo,
 )
-from loops.loop_else import (
+from looping_and_ds.python_loops_mastery.loops.loop_else import (
     search_number_with_for_else,
     count_with_while_else,
 )

@@ -1,4 +1,4 @@
-from iterators_generators.generator_expressions import (
+from looping_and_ds.python_iterators_generators_mastery.iterators_generators.generator_expressions import (
     build_square_generator,
     build_even_generator,
 )

@@ -1,4 +1,4 @@
-from conditionals.logical_operators import evaluate_logical_operations, can_access_system
+from looping_and_ds.python_control_flow_mastery.conditionals.logical_operators import evaluate_logical_operations, can_access_system
 
 
 def test_logical_operations():

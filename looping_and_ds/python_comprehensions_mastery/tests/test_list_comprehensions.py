@@ -1,4 +1,4 @@
-from comprehensions.list_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.list_comprehensions import (
     get_even_numbers,
     get_squared_numbers,
 )

@@ -1,4 +1,4 @@
-from data_structure_iteration.dictionary_iteration import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.dictionary_iteration import (
     get_dictionary_keys,
     get_dictionary_values,
     get_dictionary_items,

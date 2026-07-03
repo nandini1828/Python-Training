@@ -1,4 +1,4 @@
-from conditionals.if_else import classify_number, check_pass_status
+from looping_and_ds.python_control_flow_mastery.conditionals.if_else import classify_number, check_pass_status
 
 
 def test_classify_positive():

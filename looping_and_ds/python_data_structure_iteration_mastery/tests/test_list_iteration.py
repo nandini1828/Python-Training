@@ -1,4 +1,4 @@
-from data_structure_iteration.list_iteration import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.list_iteration import (
     get_items_by_index,
     get_list_slices,
     iterate_list_items,

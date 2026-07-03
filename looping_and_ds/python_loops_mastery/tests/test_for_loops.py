@@ -1,4 +1,4 @@
-from loops.for_loops import iterate_list, iterate_string, iterate_range
+from looping_and_ds.python_loops_mastery.loops.for_loops import iterate_list, iterate_string, iterate_range
 
 
 def test_iterate_list():

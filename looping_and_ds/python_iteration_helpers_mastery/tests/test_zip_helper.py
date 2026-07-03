@@ -1,4 +1,4 @@
-from iteration_helpers.zip_helper import zip_items, zip_longest_items
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.zip_helper import zip_items, zip_longest_items
 
 
 def test_zip_items():

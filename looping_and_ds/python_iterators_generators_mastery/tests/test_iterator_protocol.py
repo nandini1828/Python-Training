@@ -1,4 +1,4 @@
-from iterators_generators.iterator_protocol import NumberIterator
+from looping_and_ds.python_iterators_generators_mastery.iterators_generators.iterator_protocol import NumberIterator
 
 
 def test_number_iterator_returns_expected_values():

@@ -1,4 +1,4 @@
-from data_structure_iteration.list_modification_trap import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.list_modification_trap import (
     remove_even_numbers_unsafely,
     remove_even_numbers_safely,
 )

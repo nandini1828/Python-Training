@@ -1,4 +1,4 @@
-from iteration_helpers.any_all_helper import check_any, check_all
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.any_all_helper import check_any, check_all
 
 
 def test_check_any():

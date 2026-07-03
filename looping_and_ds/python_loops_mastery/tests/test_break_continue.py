@@ -1,4 +1,4 @@
-from loops.break_continue import find_first_even, skip_even_numbers
+from looping_and_ds.python_loops_mastery.loops.break_continue import find_first_even, skip_even_numbers
 
 
 def test_find_first_even():

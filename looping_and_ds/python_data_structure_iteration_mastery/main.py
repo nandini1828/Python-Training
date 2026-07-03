@@ -6,25 +6,25 @@ list iteration, dictionary iteration, key protection,
 list modification safety, and set iteration.
 """
 
-from data_structure_iteration.list_iteration import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.list_iteration import (
     get_items_by_index,
     get_list_slices,
     iterate_list_items,
 )
-from data_structure_iteration.list_modification_trap import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.list_modification_trap import (
     remove_even_numbers_unsafely,
     remove_even_numbers_safely,
 )
-from data_structure_iteration.dictionary_iteration import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.dictionary_iteration import (
     get_dictionary_keys,
     get_dictionary_values,
     get_dictionary_items,
 )
-from data_structure_iteration.dictionary_key_protection import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.dictionary_key_protection import (
     safe_get_value,
     count_words_with_defaultdict,
 )
-from data_structure_iteration.set_iteration import (
+from looping_and_ds.python_data_structure_iteration_mastery.data_structure_iteration.set_iteration import (
     check_membership_in_list,
     check_membership_in_set,
     iterate_set_items,

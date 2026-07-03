@@ -1,4 +1,4 @@
-from conditionals.ternary import get_voting_status, get_parity
+from looping_and_ds.python_control_flow_mastery.conditionals.ternary import get_voting_status, get_parity
 
 
 def test_voting_status_eligible():

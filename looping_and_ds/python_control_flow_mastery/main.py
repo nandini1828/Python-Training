@@ -2,12 +2,12 @@
 Main runner for Python Control Flow Mastery project.
 """
 
-from conditionals.if_else import classify_number
-from conditionals.truthy_falsy import evaluate_truthy_falsy
-from conditionals.logical_operators import evaluate_logical_operations
-from conditionals.short_circuit import get_first_truthy_value
-from conditionals.ternary import get_voting_status
-from conditionals.match_case import get_day_category
+from looping_and_ds.python_control_flow_mastery.conditionals.if_else import classify_number
+from looping_and_ds.python_control_flow_mastery.conditionals.truthy_falsy import evaluate_truthy_falsy
+from looping_and_ds.python_control_flow_mastery.conditionals.logical_operators import evaluate_logical_operations
+from looping_and_ds.python_control_flow_mastery.conditionals.short_circuit import get_first_truthy_value
+from looping_and_ds.python_control_flow_mastery.conditionals.ternary import get_voting_status
+from looping_and_ds.python_control_flow_mastery.conditionals.match_case import get_day_category
 
 
 def run_examples() -> None:

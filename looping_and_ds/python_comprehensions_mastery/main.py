@@ -5,19 +5,19 @@ This script imports and exercises comprehension-related modules
 in a single runnable demonstration.
 """
 
-from comprehensions.list_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.list_comprehensions import (
     get_even_numbers,
     get_squared_numbers,
 )
-from comprehensions.dictionary_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.dictionary_comprehensions import (
     build_square_dictionary,
     map_words_to_lengths,
 )
-from comprehensions.set_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.set_comprehensions import (
     get_unique_lowercase_words,
     get_even_number_set,
 )
-from comprehensions.nested_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.nested_comprehensions import (
     flatten_matrix,
     build_multiplication_grid,
 )

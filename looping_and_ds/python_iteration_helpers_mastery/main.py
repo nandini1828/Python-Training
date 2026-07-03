@@ -5,11 +5,11 @@ This script imports and exercises helper modules
 related to Python iteration helper functions.
 """
 
-from iteration_helpers.range_helper import generate_range
-from iteration_helpers.enumerate_helper import enumerate_items
-from iteration_helpers.zip_helper import zip_items, zip_longest_items
-from iteration_helpers.reverse_sort_helper import reverse_items, sort_numbers, sort_records_by_key
-from iteration_helpers.any_all_helper import check_any, check_all
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.range_helper import generate_range
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.enumerate_helper import enumerate_items
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.zip_helper import zip_items, zip_longest_items
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.reverse_sort_helper import reverse_items, sort_numbers, sort_records_by_key
+from looping_and_ds.python_iteration_helpers_mastery.iteration_helpers.any_all_helper import check_any, check_all
 
 
 def main() -> None:

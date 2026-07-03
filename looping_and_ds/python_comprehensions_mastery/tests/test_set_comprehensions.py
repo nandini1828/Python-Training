@@ -1,4 +1,4 @@
-from comprehensions.set_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.set_comprehensions import (
     get_unique_lowercase_words,
     get_even_number_set,
 )

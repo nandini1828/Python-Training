@@ -1,4 +1,4 @@
-from comprehensions.dictionary_comprehensions import (
+from looping_and_ds.python_comprehensions_mastery.comprehensions.dictionary_comprehensions import (
     build_square_dictionary,
     map_words_to_lengths,
 )
