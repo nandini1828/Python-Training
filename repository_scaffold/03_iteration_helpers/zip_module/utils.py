@@ -1,70 +1,116 @@
 """
-Utility functions demonstrating zip() usage
+utils.py
+
+Reusable utility functions demonstrating Python's built-in zip() function.
 """
 
-from itertools import zip_longest
+from typing import Any
 
 
-def pair_lists(list1, list2):
+def zip_lists(first: list[Any], second: list[Any]) -> list[tuple[Any, Any]]:
     """
-    Pair two lists element-wise
+    Combine two lists into a list of tuples.
     """
-    return list(zip(list1, list2))
+    return list(zip(first, second))
 
 
-def pair_multiple_lists(*lists):
+def zip_three_lists(
+    first: list[Any],
+    second: list[Any],
+    third: list[Any],
+) -> list[tuple[Any, Any, Any]]:
     """
-    Zip multiple iterables together
+    Combine three lists into a list of tuples.
     """
-    return list(zip(*lists))
+    return list(zip(first, second, third))
 
 
-def zip_with_index(iterable):
+def create_dictionary(keys: list[Any], values: list[Any]) -> dict[Any, Any]:
     """
-    Combine enumerate and zip
-    """
-    return list(zip(range(len(iterable)), iterable))
-
-
-def uneven_zip(list1, list2, fill_value=None):
-    """
-    Handle uneven lists using zip_longest
-    """
-    return list(zip_longest(list1, list2, fillvalue=fill_value))
-
-
-def unzip_pairs(paired_list):
-    """
-    Unzip list of tuples into separate lists
-    """
-    if not paired_list:
-        return [], []
-    return map(list, zip(*paired_list))
-
-
-def create_dict(keys, values):
-    """
-    Create dictionary using zip
+    Create a dictionary using zip().
     """
     return dict(zip(keys, values))
 
 
-def compare_lists(list1, list2):
+def unzip_pairs(
+    pairs: list[tuple[Any, Any]],
+) -> tuple[tuple[Any, ...], tuple[Any, ...]]:
     """
-    Compare two lists element-wise
+    Unzip a list of key-value pairs.
     """
-    return [(a, b, a == b) for a, b in zip(list1, list2)]
+    if not pairs:
+        return (), ()
+
+    return zip(*pairs)
 
 
-def sum_pairs(list1, list2):
+def compare_lists(
+    first: list[Any],
+    second: list[Any],
+) -> list[bool]:
     """
-    Add corresponding elements of two lists
+    Compare corresponding elements of two lists.
     """
-    return [a + b for a, b in zip(list1, list2)]
+    return [left == right for left, right in zip(first, second)]
 
 
-def transpose_matrix(matrix):
+def create_employee_records(
+    ids: list[int],
+    names: list[str],
+) -> list[dict[str, Any]]:
     """
-    Transpose a 2D matrix using zip
+    Create employee records from IDs and names.
     """
-    return [list(row) for row in zip(*matrix)]
+    return [
+        {"id": employee_id, "name": name}
+        for employee_id, name in zip(ids, names)
+    ]
+
+
+def pair_coordinates(
+    x_values: list[int],
+    y_values: list[int],
+) -> list[tuple[int, int]]:
+    """
+    Pair x and y coordinates.
+    """
+    return list(zip(x_values, y_values))
+
+
+def student_report(
+    students: list[str],
+    grades: list[str],
+) -> list[str]:
+    """
+    Generate student grade reports.
+    """
+    return [
+        f"{student} -> Grade {grade}"
+        for student, grade in zip(students, grades)
+    ]
+
+
+def total_prices(
+    products: list[str],
+    prices: list[float],
+) -> list[str]:
+    """
+    Create formatted product-price strings.
+    """
+    return [
+        f"{product}: ₹{price}"
+        for product, price in zip(products, prices)
+    ]
+
+
+def zip_to_indexed_dict(
+    keys: list[Any],
+    values: list[Any],
+) -> dict[int, tuple[Any, Any]]:
+    """
+    Create a dictionary with indexes as keys and zipped pairs as values.
+    """
+    return {
+        index: pair
+        for index, pair in enumerate(zip(keys, values))
+    }

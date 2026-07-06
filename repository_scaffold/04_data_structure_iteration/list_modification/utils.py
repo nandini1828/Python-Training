@@ -14,10 +14,12 @@ def remove_item(values: list[Any], item: Any) -> list[Any]:
     return result
 
 
+
 def insert_item(values: list[Any], index: int, item: Any) -> list[Any]:
     result = values.copy()
     result.insert(index, item)
     return result
+
 
 
 def pop_item(values: list[Any]) -> list[Any]:

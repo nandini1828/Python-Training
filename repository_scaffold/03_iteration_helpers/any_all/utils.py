@@ -1,73 +1,86 @@
 """
-Utilities for any() and all() operations
+utils.py
+
+Reusable utility functions demonstrating Python's built-in any() and all() functions.
 """
 
-
-def check_any_true(data):
-    """
-    Returns True if at least one element is True
-    """
-    return any(data)
+from typing import Any
 
 
-def check_all_true(data):
+def any_truthy(values: list[Any]) -> bool:
     """
-    Returns True if all elements are True
+    Return True if at least one value is truthy.
     """
-    return all(data)
+    return any(values)
 
 
-def any_greater_than(data, value):
+def all_truthy(values: list[Any]) -> bool:
     """
-    Check if any element is greater than given value
+    Return True if all values are truthy.
     """
-    return any(x > value for x in data)
+    return all(values)
 
 
-def all_greater_than(data, value):
+def any_positive(numbers: list[int]) -> bool:
     """
-    Check if all elements are greater than given value
+    Return True if at least one number is positive.
     """
-    return all(x > value for x in data)
+    return any(number > 0 for number in numbers)
 
 
-def any_even(data):
+def all_positive(numbers: list[int]) -> bool:
     """
-    Check if any number is even
+    Return True if all numbers are positive.
     """
-    return any(x % 2 == 0 for x in data)
+    return all(number > 0 for number in numbers)
 
 
-def all_even(data):
+def all_even(numbers: list[int]) -> bool:
     """
-    Check if all numbers are even
+    Return True if all numbers are even.
     """
-    return all(x % 2 == 0 for x in data)
+    return all(number % 2 == 0 for number in numbers)
 
 
-def any_non_empty(strings):
+def any_empty_string(strings: list[str]) -> bool:
     """
-    Check if any string is non-empty
+    Return True if any string is empty.
     """
-    return any(strings)
+    return any(not string for string in strings)
 
 
-def all_non_empty(strings):
+def all_passwords_valid(passwords: list[str], minimum_length: int = 8) -> bool:
     """
-    Check if all strings are non-empty
+    Return True if all passwords meet the minimum length.
     """
-    return all(strings)
+    return all(len(password) >= minimum_length for password in passwords)
 
 
-def any_match(data, condition):
+def any_text_file(files: list[str]) -> bool:
     """
-    Generic any() using condition function
+    Return True if any filename ends with '.txt'.
     """
-    return any(condition(x) for x in data)
+    return any(file.endswith(".txt") for file in files)
 
 
-def all_match(data, condition):
+def has_required_fields(
+    data: dict[str, Any],
+    required_fields: list[str],
+) -> bool:
     """
-    Generic all() using condition function
+    Return True if all required fields exist in the dictionary.
     """
-    return all(condition(x) for x in data)
+    return all(field in data for field in required_fields)
+
+
+def has_permissions(
+    user_permissions: list[str],
+    required_permissions: list[str],
+) -> bool:
+    """
+    Return True if all required permissions are available.
+    """
+    return all(
+        permission in user_permissions
+        for permission in required_permissions
+    )

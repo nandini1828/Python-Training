@@ -1,35 +1,78 @@
 """
-Utilities for reversed operations
+utils.py
+
+Reusable utility functions demonstrating Python's built-in reversed() function.
 """
 
-def reverse_list(data):
-    return list(reversed(data))
+from typing import Any
 
 
-def reverse_string(text):
-    return text[::-1]
+def reverse_list(items: list[Any]) -> list[Any]:
+    """
+    Return a reversed copy of a list.
+    """
+    return list(reversed(items))
 
 
-def reverse_tuple(data):
-    return tuple(reversed(data))
+def reverse_tuple(items: tuple[Any, ...]) -> tuple[Any, ...]:
+    """
+    Return a reversed tuple.
+    """
+    return tuple(reversed(items))
 
 
-def reverse_range(start, end):
-    return list(reversed(range(start, end)))
+def reverse_string(text: str) -> str:
+    """
+    Return the reversed string.
+    """
+    return "".join(reversed(text))
 
 
-def reverse_words(sentence):
-    return " ".join(sentence.split()[::-1])
+def reverse_range(start: int, stop: int) -> list[int]:
+    """
+    Return a reversed range from start to stop.
+    """
+    return list(reversed(range(start, stop)))
 
 
-def reverse_each_word(sentence):
-    return " ".join(word[::-1] for word in sentence.split())
+def reverse_lines(lines: list[str]) -> list[str]:
+    """
+    Return lines in reverse order.
+    """
+    return list(reversed(lines))
 
 
-def is_palindrome(text):
-    text = text.replace(" ", "").lower()
-    return text == text[::-1]
+def reverse_keys(data: dict[Any, Any]) -> list[Any]:
+    """
+    Return dictionary keys in reverse insertion order.
+    """
+    return list(reversed(data.keys()))
 
 
-def reverse_with_slice(data):
-    return data[::-1]
+def reverse_values(data: dict[Any, Any]) -> list[Any]:
+    """
+    Return dictionary values in reverse insertion order.
+    """
+    return list(reversed(data.values()))
+
+
+def countdown(start: int) -> list[int]:
+    """
+    Return a countdown from start to 1.
+    """
+    return list(reversed(range(1, start + 1)))
+
+
+def browser_history(history: list[str]) -> list[str]:
+    """
+    Return browser history from newest to oldest.
+    """
+    return list(reversed(history))
+
+
+def is_palindrome(text: str) -> bool:
+    """
+    Check whether a string is a palindrome.
+    """
+    cleaned = text.lower()
+    return cleaned == "".join(reversed(cleaned))

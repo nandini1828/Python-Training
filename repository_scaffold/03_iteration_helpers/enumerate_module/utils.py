@@ -1,54 +1,96 @@
 """
-Utility functions demonstrating enumerate() usage
+utils.py
+
+Reusable utility functions demonstrating Python's built-in enumerate() function.
 """
 
-def index_items(iterable):
-    """
-    Return list of (index, item)
-    """
-    return list(enumerate(iterable))
+from typing import Any
 
 
-def index_with_start(iterable, start=1):
+def enumerate_items(items: list[Any]) -> list[tuple[int, Any]]:
     """
-    Enumerate with custom starting index
+    Return a list of (index, value) pairs.
     """
-    return list(enumerate(iterable, start=start))
+    return list(enumerate(items))
 
 
-def find_item_positions(iterable, target):
+def enumerate_with_start(items: list[Any], start: int) -> list[tuple[int, Any]]:
     """
-    Return all positions of a target element
+    Return enumerated items starting from a custom index.
     """
-    return [index for index, value in enumerate(iterable) if value == target]
+    return list(enumerate(items, start=start))
 
 
-def create_index_mapping(iterable):
+def create_index_dictionary(items: list[Any]) -> dict[int, Any]:
     """
-    Create dictionary mapping index -> value
+    Create a dictionary using indexes as keys.
     """
-    return {index: value for index, value in enumerate(iterable)}
+    return {index: value for index, value in enumerate(items)}
 
 
-def filter_with_index(iterable):
+def find_item_index(items: list[Any], target: Any) -> int:
     """
-    Return elements present at even index positions
+    Return the index of the target item.
+    Returns -1 if not found.
     """
-    return [value for index, value in enumerate(iterable) if index % 2 == 0]
+    for index, value in enumerate(items):
+        if value == target:
+            return index
+
+    return -1
 
 
-def enumerate_string(text):
+def number_lines(lines: list[str]) -> list[str]:
     """
-    Return list of indexed characters
+    Return numbered lines starting from 1.
+    """
+    return [
+        f"{line_number}. {line}"
+        for line_number, line in enumerate(lines, start=1)
+    ]
+
+
+def enumerate_characters(text: str) -> list[tuple[int, str]]:
+    """
+    Return (index, character) pairs for a string.
     """
     return list(enumerate(text))
 
 
-def compare_lists(list1, list2):
+def enumerate_tuple(items: tuple[Any, ...]) -> list[tuple[int, Any]]:
     """
-    Compare two lists element-wise with index
+    Return enumerated tuple elements.
     """
-    result = []
-    for index, (a, b) in enumerate(zip(list1, list2)):
-        result.append((index, a, b, a == b))
-    return result
+    return list(enumerate(items))
+
+
+def create_student_records(students: list[str], start_roll: int = 1) -> dict[int, str]:
+    """
+    Create student records with roll numbers.
+    """
+    return {
+        roll: student
+        for roll, student in enumerate(students, start=start_roll)
+    }
+
+
+def even_index_items(items: list[Any]) -> list[Any]:
+    """
+    Return elements located at even indexes.
+    """
+    return [
+        value
+        for index, value in enumerate(items)
+        if index % 2 == 0
+    ]
+
+
+def odd_index_items(items: list[Any]) -> list[Any]:
+    """
+    Return elements located at odd indexes.
+    """
+    return [
+        value
+        for index, value in enumerate(items)
+        if index % 2 != 0
+    ]

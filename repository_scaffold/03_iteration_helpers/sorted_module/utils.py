@@ -1,44 +1,84 @@
 """
-Utilities for sorted() operations
+utils.py
+
+Reusable utility functions demonstrating Python's built-in sorted() function.
 """
 
-
-def sort_list(data):
-    return sorted(data)
+from typing import Any
 
 
-def sort_descending(data):
-    return sorted(data, reverse=True)
+def sort_numbers(numbers: list[int]) -> list[int]:
+    """
+    Return numbers sorted in ascending order.
+    """
+    return sorted(numbers)
 
 
-def sort_strings(data):
-    return sorted(data)
+def sort_numbers_descending(numbers: list[int]) -> list[int]:
+    """
+    Return numbers sorted in descending order.
+    """
+    return sorted(numbers, reverse=True)
 
 
-def sort_by_length(data):
-    return sorted(data, key=len)
+def sort_strings(strings: list[str]) -> list[str]:
+    """
+    Return strings sorted alphabetically.
+    """
+    return sorted(strings)
 
 
-def sort_dict_by_keys(data):
-    return dict(sorted(data.items()))
+def sort_by_length(items: list[str]) -> list[str]:
+    """
+    Return strings sorted by length.
+    """
+    return sorted(items, key=len)
 
 
-def sort_dict_by_values(data):
-    return dict(sorted(data.items(), key=lambda x: x[1]))
+def sort_dictionary_keys(data: dict[Any, Any]) -> list[Any]:
+    """
+    Return dictionary keys in sorted order.
+    """
+    return sorted(data.keys())
 
 
-def sort_tuples_by_second(data):
-    return sorted(data, key=lambda x: x[1])
+def sort_dictionary_items(data: dict[Any, Any]) -> list[tuple[Any, Any]]:
+    """
+    Return dictionary items sorted by key.
+    """
+    return sorted(data.items())
 
 
-def custom_sort_case_insensitive(data):
-    return sorted(data, key=str.lower)
+def sort_tuples(items: list[tuple[Any, ...]]) -> list[tuple[Any, ...]]:
+    """
+    Return tuples sorted in ascending order.
+    """
+    return sorted(items)
 
 
-def sort_numbers_as_strings(data):
-    return sorted(data, key=str)
+def sort_students_by_marks(
+    students: list[tuple[str, int]],
+    reverse: bool = True,
+) -> list[tuple[str, int]]:
+    """
+    Return students sorted by marks.
+    """
+    return sorted(
+        students,
+        key=lambda student: student[1],
+        reverse=reverse,
+    )
 
 
-def stable_sort_example(data):
-    # demonstrates stability
-    return sorted(data, key=lambda x: x[0])
+def case_insensitive_sort(strings: list[str]) -> list[str]:
+    """
+    Return strings sorted without considering letter case.
+    """
+    return sorted(strings, key=str.lower)
+
+
+def sort_set(values: set[Any]) -> list[Any]:
+    """
+    Return a sorted list from a set.
+    """
+    return sorted(values)

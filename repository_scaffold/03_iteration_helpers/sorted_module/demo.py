@@ -1,39 +1,139 @@
-from .utils import *
+"""
+demo.py
 
-def run_demo():
-    print("=== sorted() DEMO ===\n")
+Practical demonstrations of Python's built-in sorted() function.
 
-    print("1. Sort list:")
-    print(sort_list([5, 2, 9, 1]))
+Run:
+    python demo.py
+"""
 
-    print("\n2. Sort descending:")
-    print(sort_descending([5, 2, 9, 1]))
 
-    print("\n3. Sort strings:")
-    print(sort_strings(["banana", "apple", "cherry"]))
+def sort_numbers():
+    print("\n===== Sort Numbers =====")
 
-    print("\n4. Sort by length:")
-    print(sort_by_length(["a", "abcd", "abc"]))
+    numbers = [45, 12, 78, 23, 9]
 
-    print("\n5. Sort dict by keys:")
-    print(sort_dict_by_keys({"b": 2, "a": 1, "c": 3}))
+    print("Original :", numbers)
+    print("Sorted   :", sorted(numbers))
 
-    print("\n6. Sort dict by values:")
-    print(sort_dict_by_values({"b": 2, "a": 1, "c": 3}))
 
-    print("\n7. Sort tuples by second value:")
-    print(sort_tuples_by_second([(1, 3), (2, 1), (4, 2)]))
+def sort_descending():
+    print("\n===== Descending Order =====")
 
-    print("\n8. Case insensitive sort:")
-    print(custom_sort_case_insensitive(["Banana", "apple", "Cherry"]))
+    numbers = [45, 12, 78, 23, 9]
 
-    print("\n9. Sort numbers as strings:")
-    print(sort_numbers_as_strings([10, 2, 1]))
+    print(sorted(numbers, reverse=True))
 
-    print("\n10. Stable sort example:")
-    data = [(1, "b"), (1, "a"), (2, "c")]
-    print(stable_sort_example(data))
+
+def sort_strings():
+    print("\n===== Sort Strings =====")
+
+    fruits = ["Orange", "Apple", "Mango", "Banana"]
+
+    print(sorted(fruits))
+
+
+def sort_by_length():
+    print("\n===== Sort By Length =====")
+
+    names = ["Ganesh", "Raj", "Christopher", "Priya"]
+
+    print(sorted(names, key=len))
+
+
+def sort_dictionary_keys():
+    print("\n===== Sort Dictionary Keys =====")
+
+    student = {
+        "course": "Python",
+        "name": "Ganesh",
+        "age": 22,
+    }
+
+    print(sorted(student))
+
+
+def sort_dictionary_items():
+    print("\n===== Sort Dictionary Items =====")
+
+    marks = {
+        "Ganesh": 95,
+        "Rahul": 88,
+        "Priya": 91,
+    }
+
+    for name, mark in sorted(marks.items()):
+        print(name, mark)
+
+
+def sort_tuples():
+    print("\n===== Sort Tuples =====")
+
+    coordinates = [
+        (3, 4),
+        (1, 8),
+        (2, 5),
+    ]
+
+    print(sorted(coordinates))
+
+
+def sort_students_by_marks():
+    print("\n===== Sort Students By Marks =====")
+
+    students = [
+        ("Ganesh", 95),
+        ("Rahul", 88),
+        ("Priya", 91),
+    ]
+
+    sorted_students = sorted(
+        students,
+        key=lambda student: student[1],
+        reverse=True,
+    )
+
+    for student in sorted_students:
+        print(student)
+
+
+def case_insensitive_sort():
+    print("\n===== Case-Insensitive Sort =====")
+
+    languages = ["python", "Java", "c", "Go"]
+
+    print(sorted(languages, key=str.lower))
+
+
+def preserve_original():
+    print("\n===== Preserve Original List =====")
+
+    values = [5, 1, 8, 3]
+
+    sorted_values = sorted(values)
+
+    print("Original :", values)
+    print("Sorted   :", sorted_values)
+
+
+def main():
+    print("=" * 70)
+    print("SORTED() FUNCTION DEMONSTRATIONS")
+    print("=" * 70)
+
+    sort_numbers()
+    sort_descending()
+    sort_strings()
+    sort_by_length()
+    sort_dictionary_keys()
+    sort_dictionary_items()
+    sort_tuples()
+    sort_students_by_marks()
+    case_insensitive_sort()
+    preserve_original()
+
+    print("\nAll demonstrations completed successfully.")
 
 
 if __name__ == "__main__":
-    run_demo()
+    main()

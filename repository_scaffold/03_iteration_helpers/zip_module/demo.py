@@ -1,44 +1,140 @@
-from .utils import *
+"""
+demo.py
 
-def run_demo():
-    print("=== ZIP MODULE DEMO ===\n")
+Practical demonstrations of Python's built-in zip() function.
 
-    list1 = [1, 2, 3]
-    list2 = ["a", "b", "c"]
-    list3 = [True, False, True]
+Run:
+    python demo.py
+"""
 
-    print("1. Pair lists:")
-    print(pair_lists(list1, list2))
 
-    print("\n2. Multiple lists:")
-    print(pair_multiple_lists(list1, list2, list3))
+def pair_names_and_marks():
+    print("\n===== Pair Names and Marks =====")
 
-    print("\n3. Zip with index:")
-    print(zip_with_index(list2))
+    names = ["Ganesh", "Rahul", "Priya", "Sneha"]
+    marks = [95, 91, 88, 97]
 
-    print("\n4. Uneven zip:")
-    print(uneven_zip([1, 2], ["a", "b", "c"], fill_value="X"))
+    for name, mark in zip(names, marks):
+        print(f"{name}: {mark}")
 
-    print("\n5. Unzip pairs:")
-    pairs = [(1, "a"), (2, "b")]
-    print(list(unzip_pairs(pairs)))
 
-    print("\n6. Create dict:")
-    print(create_dict(["id", "name"], [1, "Ganesh"]))
+def combine_three_lists():
+    print("\n===== Combine Three Lists =====")
 
-    print("\n7. Compare lists:")
-    print(compare_lists([1, 2, 3], [1, 5, 3]))
+    names = ["Alice", "Bob", "Charlie"]
+    departments = ["IT", "HR", "Finance"]
+    salaries = [70000, 65000, 80000]
 
-    print("\n8. Sum pairs:")
-    print(sum_pairs([1, 2, 3], [4, 5, 6]))
+    for name, department, salary in zip(names, departments, salaries):
+        print(f"{name} | {department} | ₹{salary}")
 
-    print("\n9. Transpose matrix:")
-    matrix = [
-        [1, 2, 3],
-        [4, 5, 6]
+
+def create_dictionary():
+    print("\n===== Create Dictionary =====")
+
+    keys = ["id", "name", "role"]
+    values = [101, "Ganesh", "Software Engineer"]
+
+    employee = dict(zip(keys, values))
+    print(employee)
+
+
+def unequal_length_lists():
+    print("\n===== Unequal Length Lists =====")
+
+    letters = ["A", "B", "C", "D"]
+    numbers = [1, 2]
+
+    for letter, number in zip(letters, numbers):
+        print(letter, number)
+
+    print("Iteration stops at the shortest iterable.")
+
+
+def unzip_data():
+    print("\n===== Unzip Data =====")
+
+    records = [
+        (1, "Python"),
+        (2, "Java"),
+        (3, "Go"),
     ]
-    print(transpose_matrix(matrix))
+
+    ids, languages = zip(*records)
+
+    print("IDs:", ids)
+    print("Languages:", languages)
+
+
+def generate_report():
+    print("\n===== Student Report =====")
+
+    students = ["Anil", "Kiran", "Meena"]
+    grades = ["A", "B", "A"]
+
+    for student, grade in zip(students, grades):
+        print(f"{student} -> Grade {grade}")
+
+
+def compare_lists():
+    print("\n===== Compare Lists =====")
+
+    list_one = [10, 20, 30]
+    list_two = [10, 25, 30]
+
+    for first, second in zip(list_one, list_two):
+        print(f"{first} == {second}: {first == second}")
+
+
+def calculate_total_price():
+    print("\n===== Calculate Total Price =====")
+
+    products = ["Laptop", "Mouse", "Keyboard"]
+    prices = [50000, 800, 1500]
+
+    for product, price in zip(products, prices):
+        print(f"{product}: ₹{price}")
+
+
+def create_employee_records():
+    print("\n===== Employee Records =====")
+
+    ids = [101, 102, 103]
+    names = ["Ganesh", "Rahul", "Priya"]
+
+    for employee_id, name in zip(ids, names):
+        print({"id": employee_id, "name": name})
+
+
+def pair_coordinates():
+    print("\n===== Pair Coordinates =====")
+
+    x_coordinates = [1, 2, 3]
+    y_coordinates = [4, 5, 6]
+
+    coordinates = list(zip(x_coordinates, y_coordinates))
+
+    print(coordinates)
+
+
+def main():
+    print("=" * 70)
+    print("ZIP() FUNCTION DEMONSTRATIONS")
+    print("=" * 70)
+
+    pair_names_and_marks()
+    combine_three_lists()
+    create_dictionary()
+    unequal_length_lists()
+    unzip_data()
+    generate_report()
+    compare_lists()
+    calculate_total_price()
+    create_employee_records()
+    pair_coordinates()
+
+    print("\nAll demonstrations completed successfully.")
 
 
 if __name__ == "__main__":
-    run_demo()
+    main()
