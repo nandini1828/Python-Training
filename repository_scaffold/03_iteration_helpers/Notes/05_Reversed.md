@@ -1,35 +1,35 @@
-# reversed()
+# reversed() in Python
 
 ---
 
-## 📌 Overview
+# Learning Objectives
 
-`reversed()` returns an iterator that accesses elements in reverse order.
+After completing this chapter, you will be able to:
 
-It does NOT create a new list — it is memory efficient.
+- Understand what `reversed()` does.
+- Iterate over a sequence from end to beginning.
+- Compare `reversed()` with slicing.
+- Use `reversed()` with lists, tuples, strings, and ranges.
+- Avoid assuming `reversed()` creates a list.
 
 ---
 
-## 📌 Syntax
+# Introduction
+
+`reversed()` returns an iterator that produces values in reverse order.
+
+Example
 
 ```python
-reversed(iterable)
+values = [1, 2, 3]
+
+for value in reversed(values):
+    print(value)
 ```
 
----
+Output
 
-## 📌 Basic Example
-
-```python
-data = [1, 2, 3, 4]
-
-for i in reversed(data):
-    print(i)
-```
-
-### Output
-```
-4
+```text
 3
 2
 1
@@ -37,94 +37,156 @@ for i in reversed(data):
 
 ---
 
-## 📌 Using with list()
+# Syntax
 
 ```python
-data = [1, 2, 3]
-
-rev = list(reversed(data))
-print(rev)
+reversed(sequence)
 ```
 
-### Output
+The object must support reverse iteration.
+
+Common examples:
+
+- List
+- Tuple
+- String
+- Range
+
+---
+
+# Basic Example
+
+```python
+numbers = [10, 20, 30]
+result = reversed(numbers)
+
+print(list(result))
 ```
-[3, 2, 1]
+
+Output
+
+```text
+[30, 20, 10]
+```
+
+`reversed()` itself returns an iterator, so `list()` is used here only for display.
+
+---
+
+# Using reversed() with Strings
+
+```python
+text = "python"
+
+for char in reversed(text):
+    print(char)
+```
+
+Output
+
+```text
+n
+o
+h
+t
+y
+p
+```
+
+To build a reversed string:
+
+```python
+reversed_text = "".join(reversed(text))
 ```
 
 ---
 
-## 📌 Using with string
+# reversed() vs Slicing
 
 ```python
-text = "hello"
+values = [1, 2, 3]
 
-for ch in reversed(text):
-    print(ch)
+copy_reverse = values[::-1]
+iterator_reverse = reversed(values)
 ```
+
+| Feature | Slicing `[::-1]` | `reversed()` |
+|---|---|---|
+| Return type | New list/string copy | Iterator |
+| Memory use | Higher for large data | Lower |
+| Good for | Reusable reversed copy | One-pass reverse iteration |
 
 ---
 
-## 📌 Difference: reversed() vs slicing
+# Real-World Example: Recent Activity
 
 ```python
-data = [1, 2, 3]
+events = ["login", "view_product", "checkout"]
 
-rev1 = data[::-1]        # creates new list
-rev2 = reversed(data)    # iterator
+for event in reversed(events):
+    print(event)
 ```
 
-### Key Difference
+Output
 
-| Feature        | slicing (`[::-1]`) | reversed() |
-|---------------|------------------|-----------|
-| Memory        | creates new list | no new list |
-| Type          | list             | iterator |
-| Performance   | slower           | faster |
+```text
+checkout
+view_product
+login
+```
+
+This pattern is useful when showing newest activity first.
 
 ---
 
-## 📌 Important Points
+# Common Mistakes
 
-- Works only with sequences (list, tuple, string)
-- Returns an iterator
-- Cannot be used directly on generators
+## Mistake 1: Expecting a list
+
+```python
+result = reversed([1, 2, 3])
+print(result)
+```
+
+This prints a reverse iterator object.
+
+Use:
+
+```python
+print(list(result))
+```
+
+## Mistake 2: Reusing the same reversed iterator
+
+```python
+result = reversed([1, 2, 3])
+
+print(list(result))
+print(list(result))
+```
+
+Second output is empty because the iterator is exhausted.
+
+## Mistake 3: Using reversed() for sorting
+
+`reversed()` changes traversal direction. It does not sort values.
+
+Use `sorted(values, reverse=True)` for descending sort.
 
 ---
 
-## 📌 Common Mistake
+# Best Practices
 
-```python
-rev = reversed([1,2,3])
-print(rev)
-```
-
-### Output
-```
-<list_reverseiterator object>
-```
-
-👉 Fix:
-
-```python
-print(list(rev))
-```
+- Use `reversed()` for one-pass reverse iteration.
+- Use slicing when you need a reusable reversed copy.
+- Use `"".join(reversed(text))` for reversed strings.
+- Use `sorted(..., reverse=True)` when sorting is required.
 
 ---
 
-## 📌 Real-world Usage
+# Summary
 
-```python
-names = ["A", "B", "C"]
+`reversed()` provides memory-efficient reverse iteration.
 
-for name in reversed(names):
-    print(name)
-```
-
----
-
-## 📌 Summary
-
-- reverses sequence
-- returns iterator
-- memory efficient
-- better than slicing for large data
+It is useful when values already have an order and you want to process them from
+last to first.
