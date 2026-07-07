@@ -8,8 +8,6 @@ from itertools import zip_longest
 
 
 class ZipExamples:
-    """Utility class demonstrating zip()."""
-
     @staticmethod
     def zip_lists(
         names: list[str],
