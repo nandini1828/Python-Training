@@ -2,6 +2,16 @@
 any() and all()
 """
 
+def check_any(values):
+
+    return any(values)
+
+
+def check_all(values):
+
+    return all(values)
+
+
 
 def demo():
 

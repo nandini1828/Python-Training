@@ -17,4 +17,4 @@ def test_all_true():
 
 
 def test_all_false():
-    assert check_all([2, 3, 6]) is False
+    assert check_all([2, 0, 6]) is False
