@@ -1,24 +1,22 @@
-from loops.break_continue_pass import (
-    break_demo,
-    continue_demo,
-    pass_demo,
-)
+from loops import break_continue_pass
 
 
-def test_break_demo():
+def test_break_demo_output(capsys):
+    break_continue_pass.break_demo()
+    captured = capsys.readouterr()
 
-    expected = [0, 1, 2, 3, 4]
-
-    assert break_demo(5) == expected
-
-
-def test_continue_demo():
-
-    expected = [1, 3, 5, 7, 9]
-
-    assert continue_demo(10) == expected
+    assert captured.out.splitlines() == ["0", "1", "2", "3", "4"]
 
 
-def test_pass_demo():
+def test_continue_demo_output(capsys):
+    break_continue_pass.continue_demo()
+    captured = capsys.readouterr()
 
-    assert pass_demo(3) == "Loop finished"
+    assert captured.out.splitlines() == ["1", "3", "5", "7", "9"]
+
+
+def test_pass_demo_output(capsys):
+    break_continue_pass.pass_demo()
+    captured = capsys.readouterr()
+
+    assert captured.out.splitlines() == ["Loop finished"]

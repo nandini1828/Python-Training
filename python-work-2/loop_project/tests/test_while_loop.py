@@ -1,11 +1,8 @@
-from loops.while_loop import countdown
+from loops import while_loop
 
 
-def test_countdown():
+def test_countdown_output(capsys):
+    while_loop.countdown()
+    captured = capsys.readouterr()
 
-    assert countdown(5) == [5, 4, 3, 2, 1]
-
-
-def test_countdown_zero():
-
-    assert countdown(0) == []
+    assert captured.out.splitlines() == ["5", "4", "3", "2", "1"]
