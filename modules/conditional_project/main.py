@@ -18,61 +18,78 @@ def menu():
     print("8. Exit")
 
 
+def grade():
+    marks = int(input("Marks: "))
+    print("Grade:", calculate_grade(marks))
+
+
+def loan():
+    age = int(input("Age: "))
+    salary = int(input("Salary: "))
+    print("Eligible:", loan_eligibility(age, salary))
+
+
+def cart():
+    items = input("Enter items separated by commas: ")
+
+    if items.strip():
+        shopping_cart = [item.strip() for item in items.split(",")]
+    else:
+        shopping_cart = []
+
+    print(cart_status(shopping_cart))
+
+
+def division():
+    numerator = int(input("Numerator: "))
+    denominator = int(input("Denominator: "))
+    print(safe_division(numerator, denominator))
+
+
+def even_odd():
+    number = int(input("Number: "))
+    print(even_or_odd(number))
+
+
+def day():
+    day_number = int(input("Enter day number (1-7): "))
+    print(day_name(day_number))
+
+
+def calc():
+    first = int(input("First Number: "))
+    second = int(input("Second Number: "))
+    operator = input("Operator (+,-,*,/): ")
+    print(calculator(first, second, operator))
+
+
 def main():
 
-    while True:
+    actions = {
+        "1": grade,
+        "2": loan,
+        "3": cart,
+        "4": division,
+        "5": even_odd,
+        "6": day,
+        "7": calc
+    }
 
+    while True:
         menu()
 
         choice = input("\nEnter Choice: ")
 
-        match choice:
+        if choice == "8":
+            print("Thank you!")
+            break
 
-            case "1":
-                marks = int(input("Marks: "))
-                print("Grade:", calculate_grade(marks))
+        action = actions.get(choice)
 
-            case "2":
-                age = int(input("Age: "))
-                salary = int(input("Salary: "))
-                print("Eligible:", loan_eligibility(age, salary))
-
-            case "3":
-                items = input("Enter items separated by commas: ")
-
-                cart = (
-                    [item.strip() for item in items.split(",")]
-                    if items.strip()
-                    else []
-                )
-
-                print(cart_status(cart))
-
-            case "4":
-                a = int(input("Numerator: "))
-                b = int(input("Denominator: "))
-                print(safe_division(a, b))
-
-            case "5":
-                number = int(input("Number: "))
-                print(even_or_odd(number))
-
-            case "6":
-                day = int(input("Enter day number (1-7): "))
-                print(day_name(day))
-
-            case "7":
-                a = int(input("First Number: "))
-                b = int(input("Second Number: "))
-                op = input("Operator (+,-,*,/): ")
-                print(calculator(a, b, op))
-
-            case "8":
-                print("Thank you!")
-                break
-
-            case _:
-                print("Invalid Choice")
+        if action:
+            action()
+        else:
+            print("Invalid Choice")
 
 
 if __name__ == "__main__":
