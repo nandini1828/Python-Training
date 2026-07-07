@@ -1,4 +1,4 @@
-from dictionary_comprehension import create_square_dictionary
+from comprehensions.dictionary_comprehension import create_square_dictionary
 
 
 def test_square_dictionary_empty():

@@ -1,4 +1,4 @@
-from list_comprehension import (
+from comprehensions.list_comprehension import (
     create_squares,
     get_even_numbers,
 )

@@ -1,4 +1,6 @@
-from set_comprehension import get_unique_lowercase
+from comprehensions.set_comprehension import (
+    get_unique_lowercase,
+)
 
 
 def test_unique_lowercase():

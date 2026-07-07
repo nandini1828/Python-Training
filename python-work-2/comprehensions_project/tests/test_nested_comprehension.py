@@ -1,8 +1,7 @@
-from nested_comprehension import (
+from comprehensions.nested_comprehension import (
     flatten_matrix,
     create_grid,
 )
-
 
 def test_flatten_matrix():
     matrix = [
