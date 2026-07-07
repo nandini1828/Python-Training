@@ -5,6 +5,21 @@ Lists:
 - Iteration
 """
 
+def get_first_element(items):
+
+    return items[0]
+
+
+def get_last_element(items):
+
+    return items[-1]
+
+
+def slice_list(items, start, end):
+
+    return items[start:end]
+
+
 
 def indexing_demo():
 

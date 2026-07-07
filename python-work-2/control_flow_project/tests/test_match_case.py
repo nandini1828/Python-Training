@@ -13,5 +13,5 @@ def test_wednesday():
     assert day(3) == "Wednesday"
 
 
-def test_invalid():
+def test_invalid_day():
     assert day(10) == "Invalid"

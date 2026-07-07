@@ -2,6 +2,16 @@
 Dictionary safety.
 """
 
+def safe_get(data, key, default=None):
+
+    return data.get(key, default)
+
+
+def create_default_dictionary():
+
+    return {'Math': 10, 'Science': 20}
+
+
 from collections import defaultdict
 
 

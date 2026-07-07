@@ -6,35 +6,44 @@ from data_structures.dictionaries import (
 
 
 def test_get_keys():
-
     student = {
         "name": "Alice",
-        "age": 20,
+        "age": 22,
+        "marks": 90,
     }
 
-    assert list(get_keys(student)) == ["name", "age"]
+    assert list(get_keys(student)) == [
+        "name",
+        "age",
+        "marks",
+    ]
 
 
 def test_get_values():
-
     student = {
         "name": "Alice",
-        "age": 20,
+        "age": 22,
+        "marks": 90,
     }
 
-    assert list(get_values(student)) == ["Alice", 20]
+    assert list(get_values(student)) == [
+        "Alice",
+        22,
+        90,
+    ]
 
 
 def test_get_items():
-
     student = {
         "name": "Alice",
-        "age": 20,
+        "age": 22,
+        "marks": 90,
     }
 
     expected = [
         ("name", "Alice"),
-        ("age", 20),
+        ("age", 22),
+        ("marks", 90),
     ]
 
     assert list(get_items(student)) == expected

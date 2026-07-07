@@ -2,6 +2,11 @@
 Modifying list while iterating.
 """
 
+def remove_even_numbers(numbers):
+
+    return [num for num in numbers if num % 2 != 0]
+
+
 
 def incorrect_way():
 

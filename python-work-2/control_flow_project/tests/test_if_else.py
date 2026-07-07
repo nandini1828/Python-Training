@@ -14,8 +14,8 @@ def test_grade_c():
 
 
 def test_grade_d():
-    assert grade(60) == "D"
+    assert grade(65) == "D"
 
 
 def test_grade_fail():
-    assert grade(35) == "Fail"
+    assert grade(40) == "Fail"

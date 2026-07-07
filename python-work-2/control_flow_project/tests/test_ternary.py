@@ -7,3 +7,7 @@ def test_adult():
 
 def test_minor():
     assert get_status(15) == "Minor"
+
+
+def test_boundary():
+    assert get_status(18) == "Adult"

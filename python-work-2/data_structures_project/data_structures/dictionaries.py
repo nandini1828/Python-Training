@@ -2,6 +2,21 @@
 Dictionary iteration.
 """
 
+def get_keys(data):
+
+    return data.keys()
+
+
+def get_values(data):
+
+    return data.values()
+
+
+def get_items(data):
+
+    return data.items()
+
+
 
 def demo():
 

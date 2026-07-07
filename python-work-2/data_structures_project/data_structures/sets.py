@@ -2,6 +2,16 @@
 Set examples.
 """
 
+def contains_number(numbers, value):
+
+    return value in numbers
+
+
+def unique_values(values):
+
+    return set(values)
+
+
 
 def membership_demo():
 
