@@ -1,20 +1,28 @@
-from comprehensions.list_comprehension import (
+from list_comprehension import (
     create_squares,
     get_even_numbers,
 )
 
 
 def test_create_squares():
+    assert create_squares(5) == [
+        0,
+        1,
+        4,
+        9,
+        16,
+    ]
 
-    expected = [0, 1, 4, 9, 16]
 
-    assert create_squares(5) == expected
+def test_create_squares_empty():
+    assert create_squares(0) == []
 
 
-def test_get_even_numbers():
+def test_even_numbers():
+    assert get_even_numbers(
+        [1, 2, 3, 4, 5, 6]
+    ) == [2, 4, 6]
 
-    numbers = [1, 2, 3, 4, 5, 6]
 
-    expected = [2, 4, 6]
-
-    assert get_even_numbers(numbers) == expected
+def test_even_numbers_empty():
+    assert get_even_numbers([]) == []

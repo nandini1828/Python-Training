@@ -1,16 +1,17 @@
-from comprehensions.dictionary_comprehension import (
-    create_square_dictionary,
-)
+from dictionary_comprehension import create_square_dictionary
 
 
-def test_create_square_dictionary():
+def test_square_dictionary_empty():
+    assert create_square_dictionary(0) == {}
 
-    expected = {
+
+def test_square_dictionary_three():
+    assert create_square_dictionary(3) == {
         0: 0,
         1: 1,
         2: 4,
-        3: 9,
-        4: 16,
     }
 
-    assert create_square_dictionary(5) == expected
+
+def test_square_dictionary_five():
+    assert create_square_dictionary(5)[4] == 16
