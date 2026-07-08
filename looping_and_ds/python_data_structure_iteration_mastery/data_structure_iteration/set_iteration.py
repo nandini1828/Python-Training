@@ -6,7 +6,6 @@ Set iteration and membership utilities.
 def check_membership_in_list(items: list[int], target: int) -> bool:
     """
     Checks membership in a list.
-
     Parameters
     ----------
     items : list[int]

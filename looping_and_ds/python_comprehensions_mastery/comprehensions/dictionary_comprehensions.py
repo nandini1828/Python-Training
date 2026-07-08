@@ -9,7 +9,7 @@ def build_square_dictionary(limit: int) -> dict[int, int]:
 
     Parameters
     ----------
-    limit : int
+    limit : int 
         Upper limit for range generation.
 
     Returns

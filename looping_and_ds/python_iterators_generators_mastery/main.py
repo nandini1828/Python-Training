@@ -10,6 +10,8 @@ from looping_and_ds.python_iterators_generators_mastery.iterators_generators.gen
 from looping_and_ds.python_iterators_generators_mastery.iterators_generators.generator_expressions import (
     build_square_generator,
     build_even_generator,
+    build_scaled_generator,
+    run_debug_demo,
 )
 
 
@@ -34,6 +36,13 @@ def main() -> None:
 
     even_generator = build_even_generator([1, 2, 3, 4, 5, 6])
     print("   list(build_even_generator([1, 2, 3, 4, 5, 6])):", list(even_generator))
+
+    scaled_generator = build_scaled_generator([1, 2, 3], factor=2, offset=1)
+    print("   list(build_scaled_generator([1, 2, 3], factor=2, offset=1)):", list(scaled_generator))
+
+    debug_steps, debug_total = run_debug_demo([1, 2, 3], factor=2, offset=1)
+    print("   run_debug_demo([1, 2, 3], factor=2, offset=1):", debug_steps)
+    print("   final total:", debug_total)
 
 
 if __name__ == "__main__":
