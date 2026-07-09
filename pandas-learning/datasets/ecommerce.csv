@@ -1,0 +1,18 @@
+```csv
+OrderID,OrderDate,CustomerID,CustomerName,City,Product,Category,Quantity,UnitPrice,Discount,TotalAmount,PaymentMethod,OrderStatus
+5001,2025-01-03,C101,Alice Johnson,New York,Laptop,Electronics,1,750,50,700,Credit Card,Delivered
+5002,2025-01-05,C102,Bob Smith,Chicago,Mouse,Accessories,2,25,0,50,UPI,Delivered
+5003,2025-01-07,C103,Charlie Brown,Boston,Keyboard,Accessories,1,45,5,40,Cash,Delivered
+5004,2025-01-10,C104,Diana Wilson,Seattle,Monitor,Electronics,2,220,20,420,Debit Card,Shipped
+5005,2025-01-12,C105,Ethan Davis,Austin,Desk Chair,Furniture,1,140,10,130,Credit Card,Delivered
+5006,2025-01-15,C106,Fiona Miller,New York,Printer,Office,1,180,0,180,Cash,Pending
+5007,2025-01-18,C107,George Taylor,Chicago,Laptop,Electronics,1,750,75,675,Credit Card,Delivered
+5008,2025-01-20,C108,Hannah Moore,Seattle,Notebook,Office,10,5,0,50,UPI,Delivered
+5009,2025-01-22,C109,Ian Thomas,Boston,Mouse,Accessories,4,25,0,100,Debit Card,Cancelled
+5010,2025-01-25,C110,Julia Anderson,New York,Desk,Furniture,1,300,20,280,Credit Card,Delivered
+5011,2025-02-02,C111,Kevin White,Austin,Monitor,Electronics,1,220,10,210,Credit Card,Delivered
+5012,2025-02-05,C112,Lisa Martin,Chicago,Keyboard,Accessories,3,45,5,130,Cash,Delivered
+5013,2025-02-08,C113,Michael Harris,Boston,Laptop,Electronics,2,750,100,1400,Credit Card,Shipped
+5014,2025-02-12,C114,Nancy Clark,Seattle,Printer,Office,2,180,20,340,UPI,Pending
+5015,2025-02-15,C115,Oliver Lewis,Austin,Desk,Furniture,1,300,0,300,Debit Card,Delivered
+```
