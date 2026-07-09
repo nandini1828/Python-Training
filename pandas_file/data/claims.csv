@@ -1,0 +1,5 @@
+Policy_ID,Claim_Amount,Claim_Status
+101,50000,Approved
+102,120000,Pending
+103,35000,Rejected
+105,70000,Approved

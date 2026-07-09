@@ -1,0 +1,8 @@
+Policy_ID,Customer_Name,Age,City,Policy_Type,Premium,Status
+101,Rahul,30,Hyderabad,Health,15000,Active
+102,Priya,27,Bangalore,Life,22000,Active
+103,Amit,42,Chennai,Auto,18500,Expired
+104,Sneha,35,Hyderabad,Home,30000,Pending
+105,Kiran,29,Mumbai,Travel,27500,Active
+106,Arjun,40,Delhi,Health,42000,Active
+107,Meena,32,Pune,Life,28000,Pending
