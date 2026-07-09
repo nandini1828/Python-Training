@@ -16,7 +16,7 @@ Run:
 """
 
 
-def verify_card(card_inserted: bool) -> None:
+def verify_card(card_inserted: bool) -> bool:
     """
     Demonstrates a simple if statement.
     """
@@ -26,9 +26,11 @@ def verify_card(card_inserted: bool) -> None:
     if card_inserted:
         print("Card detected.")
         print("Welcome to Smart ATM.")
+        return True
+    return False
 
 
-def pin_verification(entered_pin: int, actual_pin: int) -> None:
+def pin_verification(entered_pin: int, actual_pin: int) -> bool:
     """
     Demonstrates if-else.
     """
@@ -37,11 +39,13 @@ def pin_verification(entered_pin: int, actual_pin: int) -> None:
 
     if entered_pin == actual_pin:
         print("PIN Verified.")
+        return True
     else:
         print("Invalid PIN.")
+        return False
 
 
-def account_status(balance: float) -> None:
+def account_status(balance: float) -> str:
     """
     Demonstrates if-elif-else.
     """
@@ -50,12 +54,16 @@ def account_status(balance: float) -> None:
 
     if balance >= 10000:
         print("Premium Account")
+        return "Premium Account"
     elif balance >= 3000:
         print("Standard Account")
+        return "Standard Account"
     elif balance > 0:
         print("Low Balance Account")
+        return "Low Balance Account"
     else:
         print("Zero Balance Account")
+        return "Zero Balance Account"
 
 
 def withdraw(balance: float, amount: float) -> None:

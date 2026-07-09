@@ -15,7 +15,7 @@ Run:
 """
 
 
-def login(card_inserted: bool, pin_verified: bool) -> None:
+def login(card_inserted: bool, pin_verified: bool) -> bool:
     """
     User can log in only if both the card is inserted
     and the PIN is correct.
@@ -25,11 +25,13 @@ def login(card_inserted: bool, pin_verified: bool) -> None:
 
     if card_inserted and pin_verified:
         print("Login Successful.")
+        return True
     else:
         print("Login Failed.")
+        return False
 
 
-def cash_withdrawal(balance: float, amount: float) -> None:
+def cash_withdrawal(balance: float, amount: float) -> bool:
     """
     Withdrawal is allowed only when:
     1. Amount is positive.
@@ -41,11 +43,13 @@ def cash_withdrawal(balance: float, amount: float) -> None:
     if amount > 0 and balance >= amount:
         print(f"₹{amount} withdrawn successfully.")
         print(f"Remaining Balance: ₹{balance - amount}")
+        return True
     else:
         print("Withdrawal Failed.")
+        return False
 
 
-def premium_lounge(premium_customer: bool, staff_member: bool) -> None:
+def premium_lounge(premium_customer: bool, staff_member: bool) -> bool:
     """
     A premium customer OR a bank staff member
     can access the premium lounge.
@@ -55,8 +59,10 @@ def premium_lounge(premium_customer: bool, staff_member: bool) -> None:
 
     if premium_customer or staff_member:
         print("Access Granted.")
+        return True
     else:
         print("Access Denied.")
+        return False
 
 
 def online_banking(account_locked: bool) -> None:

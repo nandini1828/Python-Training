@@ -90,6 +90,21 @@ def for_else_warehouse_search() -> None:
         print(f"\n  ✗ {search_item} is not available in any warehouse section!")
 
 
+def for_else_practical_search() -> None:
+    """Demonstrates why for-else is useful for search logic without flags."""
+    print("\n--- For-Else Practical Search ---")
+
+    inventory = {"Laptop": 15, "Mouse": 3, "Keyboard": 8}
+    print("  Checking inventory for low-stock products:")
+
+    for product, quantity in inventory.items():
+        if quantity < 5:
+            print(f"  ✓ Low stock detected: {product} ({quantity} units)")
+            break
+    else:
+        print("  ✓ All products meet the minimum stock level.")
+
+
 def while_else_basic() -> None:
     """
     Demonstrates while-else clause.
@@ -259,6 +274,7 @@ def run() -> None:
     """
     for_else_basic()
     for_else_not_found()
+    for_else_practical_search()
     for_else_warehouse_search()
     while_else_basic()
     while_else_with_break()

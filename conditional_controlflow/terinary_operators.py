@@ -14,7 +14,7 @@ Run:
 """
 
 
-def withdrawal_status(balance: float, amount: float) -> None:
+def withdrawal_status(balance: float, amount: float) -> str:
     """
     Determines whether a withdrawal is allowed.
     """
@@ -28,9 +28,10 @@ def withdrawal_status(balance: float, amount: float) -> None:
     )
 
     print(status)
+    return status
 
 
-def account_type(balance: float) -> None:
+def account_type(balance: float) -> str:
     """
     Categorizes the account based on balance.
     """
@@ -44,6 +45,7 @@ def account_type(balance: float) -> None:
     )
 
     print(account)
+    return account
 
 
 def atm_login(card_inserted: bool) -> None:

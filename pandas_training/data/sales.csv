@@ -1,0 +1,11 @@
+OrderID,CustomerID,Product,Category,Quantity,Price,OrderDate
+1001,C001,Laptop,Electronics,1,65000,2026-01-05
+1002,C002,Mouse,Accessories,2,700,2026-01-07
+1003,C003,Keyboard,Accessories,1,1500,2026-01-09
+1004,C001,Monitor,Electronics,1,12000,2026-01-10
+1005,C004,Chair,Furniture,2,4500,2026-01-12
+1006,C005,Desk,Furniture,1,8000,2026-01-15
+1007,C003,Laptop,Electronics,1,70000,2026-01-16
+1008,C002,Mouse,Accessories,3,700,2026-01-18
+1009,C006,Printer,Electronics,1,15000,2026-01-20
+1010,C005,Keyboard,Accessories,2,1500,2026-01-22

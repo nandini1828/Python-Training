@@ -1,0 +1,11 @@
+EmployeeID,Name,Age,Department,Salary,City
+101,Aarav,24,IT,45000,Hyderabad
+102,Priya,,HR,52000,Bangalore
+103,Rahul,35,,68000,Chennai
+104,Ananya,26,IT,,Pune
+105,Vikram,40,Sales,75000,
+106,Sneha,31,Marketing,62000,Bangalore
+107,Karan,27,Finance,54000,Delhi
+108,Meera,,HR,71000,Chennai
+109,Rohan,30,Sales,58000,Mumbai
+109,Rohan,30,Sales,58000,Mumbai

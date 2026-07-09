@@ -1,0 +1,11 @@
+CustomerID,CustomerName,City,Membership,JoinDate
+C001,Amit Sharma,Hyderabad,Gold,2023-05-10
+C002,Priya Singh,Bangalore,Silver,2024-01-15
+C003,Rahul Kumar,Chennai,Gold,2022-09-20
+C004,Neha Gupta,Pune,Bronze,2025-03-12
+C005,Rohan Verma,Mumbai,Silver,2023-11-08
+C006,Anjali Reddy,Hyderabad,Gold,2024-06-18
+C007,Vikram Patel,Delhi,Bronze,2025-02-25
+C008,Sneha Nair,Chennai,Silver,2024-07-19
+C009,Arjun Rao,Bangalore,Gold,2023-08-14
+C010,Kavya Iyer,Pune,Silver,2024-09-30

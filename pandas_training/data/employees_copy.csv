@@ -1,0 +1,11 @@
+EmployeeID,Name,Age,Gender,Department,City,Salary,Experience
+101,Aarav Sharma,24,Male,IT,Hyderabad,45000,2
+102,Priya Reddy,29,Female,HR,Bangalore,52000,5
+103,Rahul Verma,35,Male,Finance,Chennai,68000,10
+104,Ananya Gupta,26,Female,IT,Pune,49000,3
+105,Vikram Rao,40,Male,Sales,Hyderabad,75000,15
+106,Sneha Iyer,31,Female,Marketing,Bangalore,62000,8
+107,Karan Singh,27,Male,Finance,Delhi,54000,4
+108,Meera Nair,38,Female,HR,Chennai,71000,12
+109,Rohan Patel,30,Male,Sales,Mumbai,58000,6
+110,Divya Kapoor,25,Female,IT,Hyderabad,47000,2

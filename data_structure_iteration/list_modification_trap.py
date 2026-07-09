@@ -15,6 +15,20 @@ Run:
 from typing import List
 
 
+def why_list_removal_skips_items() -> None:
+    """Shows why removing while iterating can skip elements."""
+    print("\n--- Why Removal Skips Items ---")
+    numbers = [1, 2, 3, 4, 5]
+    print(f"  Original numbers: {numbers}")
+
+    for number in numbers:
+        if number % 2 == 0:
+            numbers.remove(number)
+        print(f"    step -> {numbers}")
+
+    print(f"  Result after unsafe removal: {numbers}")
+
+
 def list_modification_trap() -> List[str]:
     """
     Demonstrates the list modification trap and returns the safe result.
@@ -31,6 +45,8 @@ def run() -> None:
     Runs the list modification trap example.
     """
     print("\n--- List Modification Trap ---")
+    why_list_removal_skips_items()
+
     orders = ["order-001", "order-002", "order-003", "order-004"]
     print(f"  Original orders: {orders}")
 

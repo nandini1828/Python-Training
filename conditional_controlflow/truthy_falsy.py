@@ -15,7 +15,34 @@ Run:
 """
 
 
-def card_status(card: str | None) -> None:
+class ShoppingBasket:
+    """A custom object whose truthiness comes from __bool__()."""
+
+    def __init__(self, items: list[str]) -> None:
+        self.items = items
+
+    def __len__(self) -> int:
+        return len(self.items)
+
+    def __bool__(self) -> bool:
+        return len(self.items) > 2
+
+
+def custom_truthiness_demo() -> None:
+    """Demonstrates how a class can define its own truthiness."""
+    print("\n--- Custom Truthiness ---")
+
+    empty_basket = ShoppingBasket([])
+    small_basket = ShoppingBasket(["book"])
+    full_basket = ShoppingBasket(["book", "pen", "pencil"])
+
+    for basket in (empty_basket, small_basket, full_basket):
+        print(f"  Items: {basket.items} -> bool(basket) = {bool(basket)}")
+
+    print("  Note: __bool__() takes precedence over __len__() when both exist.")
+
+
+def card_status(card: str | None) -> bool:
     """
     Demonstrates how None behaves as False.
     """
@@ -24,11 +51,13 @@ def card_status(card: str | None) -> None:
 
     if card:
         print(f"Card '{card}' inserted.")
+        return True
     else:
         print("No card detected.")
+        return False
 
 
-def pin_validation(pin: str) -> None:
+def pin_validation(pin: str) -> bool:
     """
     Empty string is falsy.
     """
@@ -37,8 +66,10 @@ def pin_validation(pin: str) -> None:
 
     if pin:
         print("PIN entered.")
+        return True
     else:
         print("PIN cannot be empty.")
+        return False
 
 
 def transaction_history(history: list) -> None:
@@ -181,6 +212,7 @@ def run() -> None:
     minimum_balance(0)
 
     bool_conversion_demo()
+    custom_truthiness_demo()
 
     atm_login("Debit Card", "1234")
     atm_login(None, "1234")

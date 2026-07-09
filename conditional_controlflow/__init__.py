@@ -17,7 +17,7 @@ from . import conditionals
 from . import truthy_falsy
 from . import logical_operators
 from . import short_circuit
-from . import ternary_operator
+from . import terinary_operators as ternary_operator
 from . import pattern_matching
 
 __all__ = [
