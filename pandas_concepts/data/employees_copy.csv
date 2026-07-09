@@ -1,0 +1,7 @@
+id,name,age,city,salary,department
+1,Alice,25.0,New York,50000,HR
+2,Bob,30.0,Chicago,60000,IT
+3,Charlie,28.0,New York,55000,Finance
+4,David,,Boston,70000,IT
+5,Eva,35.0,Chicago,80000,HR
+6,Frank,30.0,Chicago,60000,IT
