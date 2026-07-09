@@ -7,9 +7,9 @@ import argparse
 from pandas_basics import (
     SeriesExamples,
     DataFrameExamples,
-    CSVExamples
+    CSVExamples,
+    InspectionExamples
 )
-
 
 def demonstrate_series() -> None:
 
@@ -64,7 +64,7 @@ def run_all() -> None:
     demonstrate_series()
     demonstrate_dataframe()
     demonstrate_csv()
-
+    demonstrate_inspection()
 
 def main() -> None:
 
@@ -79,7 +79,8 @@ def main() -> None:
             "all",
             "series",
             "dataframe",
-            "csv"
+            "csv",
+            "inspection"
         ]
     )
 
@@ -96,6 +97,50 @@ def main() -> None:
 
     elif args.section == "csv":
         demonstrate_csv()
+
+    elif args.section == "inspection":
+        demonstrate_inspection()
+
+def demonstrate_inspection() -> None:
+
+    print("\n" + "=" * 50)
+    print("DATA INSPECTION")
+    print("=" * 50)
+
+    df = CSVExamples.read_csv(
+        "data/employees.csv"
+    )
+
+    print("\nHead")
+    print(InspectionExamples.head(df))
+
+    print("\nTail")
+    print(InspectionExamples.tail(df))
+
+    print("\nShape")
+    print(InspectionExamples.shape(df))
+
+    print("\nInfo")
+    InspectionExamples.info(df)
+
+    print("\nDescribe")
+    print(InspectionExamples.describe(df))
+
+    print("\nValue Counts (Department)")
+    print(
+        InspectionExamples.value_counts(
+            df,
+            "department"
+        )
+    )
+
+    print("\nUnique Departments")
+    print(
+        InspectionExamples.unique_values(
+            df,
+            "department"
+        )
+    )
 
 
 if __name__ == "__main__":
