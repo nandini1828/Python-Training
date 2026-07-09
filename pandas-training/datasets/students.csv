@@ -1,0 +1,11 @@
+student_id,name,class,section,maths,science,english,attendance_percent,city
+201,Aarav,10,A,88,91,85,95,Hyderabad
+202,Diya,10,A,76,84,79,92,Chennai
+203,Ishaan,10,B,93,89,90,97,Bangalore
+204,Megha,9,A,69,74,72,88,Delhi
+205,Rohit,9,B,81,78,75,91,Hyderabad
+206,Saanvi,10,B,95,96,94,99,Mumbai
+207,Varun,9,A,72,70,68,85,Pune
+208,Nitya,10,A,87,90,88,96,Chennai
+209,Harsha,9,B,64,67,70,82,Bangalore
+210,Tanvi,10,B,91,93,89,98,Hyderabad
