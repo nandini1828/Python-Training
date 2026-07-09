@@ -1,0 +1,11 @@
+student_id,name,age,gender,department,semester,gpa,attendance,city
+S001,Alice,20,Female,CSE,4,8.6,91,New York
+S002,Bob,21,Male,ECE,5,7.9,85,Boston
+S003,Charlie,19,Male,CSE,3,9.1,96,Seattle
+S004,Diana,22,Female,ME,6,8.2,88,Chicago
+S005,Eva,20,Female,CSE,4,9.4,97,Dallas
+S006,Frank,23,Male,EEE,8,7.3,81,Seattle
+S007,Grace,21,Female,ECE,5,8.8,93,New York
+S008,Henry,22,Male,CSE,6,7.5,84,Chicago
+S009,Ivy,19,Female,IT,3,8.9,95,Boston
+S010,Jack,20,Male,IT,4,8.1,90,Dallas

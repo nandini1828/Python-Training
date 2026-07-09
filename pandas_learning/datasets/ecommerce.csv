@@ -1,0 +1,11 @@
+order_id,customer_name,product,category,quantity,price,payment_method,city,order_date,delivery_status,rating
+E001,Raj,Laptop,Electronics,1,72000,Credit Card,Hyderabad,2024-01-12,Delivered,5
+E002,Anjali,Headphones,Electronics,2,2500,UPI,Bangalore,2024-01-14,Delivered,4
+E003,Vikram,Shoes,Fashion,1,3500,Debit Card,Chennai,2024-02-02,Cancelled,0
+E004,Priya,Mobile,Electronics,1,48000,Credit Card,Pune,2024-02-20,Delivered,5
+E005,Rohan,T-Shirt,Fashion,3,900,Cash on Delivery,Delhi,2024-03-01,Delivered,4
+E006,Neha,Watch,Accessories,2,6500,UPI,Hyderabad,2024-03-18,Returned,3
+E007,Amit,Monitor,Electronics,1,17000,Debit Card,Bangalore,2024-04-07,Delivered,5
+E008,Sneha,Bag,Fashion,2,2200,Credit Card,Mumbai,2024-04-20,Delivered,4
+E009,Karan,Keyboard,Electronics,4,2800,UPI,Delhi,2024-05-10,Delivered,5
+E010,Meera,Tablet,Electronics,1,32000,Credit Card,Chennai,2024-05-30,Cancelled,0

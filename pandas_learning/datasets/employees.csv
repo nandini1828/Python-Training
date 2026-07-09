@@ -1,0 +1,16 @@
+employee_id,first_name,last_name,department,designation,age,gender,salary,city,joining_date,manager_id,performance_rating
+1001,John,Doe,IT,Software Engineer,27,Male,65000,New York,2021-03-15,5001,4.5
+1002,Jane,Smith,HR,HR Executive,31,Female,58000,Boston,2020-06-21,5002,4.2
+1003,Michael,Johnson,Finance,Financial Analyst,29,Male,72000,Chicago,2019-08-11,5003,4.7
+1004,Emily,Davis,IT,Backend Developer,26,Female,68000,Seattle,2022-01-10,5001,4.6
+1005,Daniel,Brown,Sales,Sales Executive,34,Male,54000,Dallas,2018-11-18,5004,3.9
+1006,Sophia,Wilson,Marketing,Marketing Analyst,28,Female,60000,San Francisco,2023-02-05,5005,4.3
+1007,David,Martinez,IT,DevOps Engineer,32,Male,85000,Seattle,2017-09-14,5001,4.8
+1008,Olivia,Anderson,Finance,Accountant,30,Female,70000,Chicago,2019-05-20,5003,4.4
+1009,James,Thomas,Sales,Sales Manager,40,Male,98000,Dallas,2015-12-01,5004,4.9
+1010,Emma,Taylor,HR,Recruiter,25,Female,52000,Boston,2024-04-12,5002,4.1
+1011,William,Moore,IT,Frontend Developer,24,Male,62000,Seattle,2023-07-08,5001,4.0
+1012,Ava,Jackson,Marketing,Content Writer,29,Female,56000,San Francisco,2022-09-17,5005,4.2
+1013,Ethan,White,Finance,Auditor,33,Male,81000,Chicago,2018-04-03,5003,4.6
+1014,Mia,Harris,Sales,Sales Executive,27,Female,55000,Dallas,2021-08-27,5004,3.8
+1015,Alexander,Clark,IT,Data Engineer,35,Male,92000,New York,2016-10-30,5001,4.9

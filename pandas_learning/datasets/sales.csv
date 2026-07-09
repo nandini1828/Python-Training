@@ -1,0 +1,11 @@
+order_id,customer_id,product,category,quantity,price,discount,salesperson,city,order_date
+O1001,C001,Laptop,Electronics,2,85000,5000,John,New York,2024-01-10
+O1002,C002,Mouse,Electronics,5,1200,0,Jane,Boston,2024-01-12
+O1003,C003,Keyboard,Electronics,3,2500,200,David,Chicago,2024-02-01
+O1004,C004,Monitor,Electronics,2,18000,1000,Emily,Seattle,2024-02-18
+O1005,C005,Desk,Furniture,1,15000,1500,Sophia,Dallas,2024-03-05
+O1006,C001,Chair,Furniture,4,7000,500,John,New York,2024-03-20
+O1007,C006,Printer,Electronics,2,22000,2500,David,Chicago,2024-04-15
+O1008,C007,Router,Networking,6,4500,300,Jane,Boston,2024-04-22
+O1009,C008,SSD,Electronics,8,6000,400,Emily,Seattle,2024-05-11
+O1010,C009,Table,Furniture,1,18000,2000,Sophia,Dallas,2024-05-28
