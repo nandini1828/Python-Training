@@ -1,10 +1,3 @@
-"""
-set_examples.py
-
-Demonstrates Python sets.
-"""
-
-
 class SetExamples:
     """Utility class demonstrating sets."""
 
