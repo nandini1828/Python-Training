@@ -1,0 +1,13 @@
+EmployeeID,Name,Age,Gender,City,Department,Experience,Salary
+101,Alice,25,Female,New York,HR,2,50000
+102,Bob,30,Male,Los Angeles,IT,5,70000
+103,Charlie,35,Male,Chicago,Finance,8,80000
+104,David,28,Male,New York,IT,3,65000
+105,Eva,40,Female,Chicago,HR,10,90000
+106,Frank,32,Male,Los Angeles,Finance,6,75000
+107,Grace,29,Female,New York,IT,4,72000
+108,Henry,45,Male,Boston,Management,15,120000
+109,Ivy,26,Female,Seattle,Marketing,2,55000
+110,Jack,38,Male,Chicago,Finance,9,85000
+111,Kate,31,Female,Boston,IT,6,78000
+112,Liam,27,Male,Seattle,Marketing,3,60000
