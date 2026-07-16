@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "student_id": 1,
+    "course_id": 1,
+    "attendance_date": "2026-07-16",
+    "status": "present",
+    "notes": "On time",
+    "created_at": "2026-07-16T11:46:46.199938"
+  },
+  {
+    "id": 2,
+    "student_id": 2,
+    "course_id": 2,
+    "attendance_date": "2026-07-16",
+    "status": "absent",
+    "notes": "Sick leave",
+    "created_at": "2026-07-16T11:46:46.200149"
+  }
+]

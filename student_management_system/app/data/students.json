@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "first_name": "Alice",
+    "last_name": "Johnson",
+    "email": "alice@example.com",
+    "phone": "555-0101",
+    "date_of_birth": "2010-05-12",
+    "grade_level": "10",
+    "is_active": true
+  },
+  {
+    "first_name": "String",
+    "last_name": "String",
+    "email": "user@example.com",
+    "phone": "strings",
+    "date_of_birth": "2026-07-16",
+    "grade_level": "string",
+    "is_active": true,
+    "id": 3
+  }
+]
