@@ -1,0 +1,177 @@
+[
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 2,
+    "name": "Bob",
+    "department": "HR",
+    "salary": 6000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "string",
+    "department": "string",
+    "salary": 0.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Steve",
+    "department": "testing",
+    "salary": 40000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Steve",
+    "department": "testing",
+    "salary": 40000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 200,
+    "name": "Role Test Employee",
+    "department": "Operations",
+    "salary": 5500.0,
+    "role": "Manager"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 200,
+    "name": "Role Test Employee",
+    "department": "Operations",
+    "salary": 5500.0,
+    "role": "Manager"
+  },
+  {
+    "employee_id": 1,
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 7000,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 100,
+    "name": "Test Employee",
+    "department": "Operations",
+    "salary": 5000.0,
+    "role": "Employee"
+  },
+  {
+    "employee_id": 200,
+    "name": "Role Test Employee",
+    "department": "Operations",
+    "salary": 5500.0,
+    "role": "Manager"
+  }
+]

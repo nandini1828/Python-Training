@@ -1,0 +1,4 @@
+[
+  {"department_id": 1, "name": "Engineering", "location": "Seattle"},
+  {"department_id": 2, "name": "HR", "location": "Remote"}
+]
