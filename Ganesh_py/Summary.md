@@ -694,7 +694,7 @@ class HashTable:
             if k == key:
                 return v
         return None
-    
+      
     def delete(self, key):
         """Remove key-value pair"""
         index = self._hash(key)

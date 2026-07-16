@@ -1,0 +1,18 @@
+```csv
+EmployeeID,Name,Department,Age,Gender,Salary,Experience,City,JoiningDate,PerformanceRating
+101,Alice Johnson,HR,29,Female,52000,4,New York,2020-06-15,4
+102,Bob Smith,IT,35,Male,78000,9,Chicago,2017-03-20,5
+103,Charlie Brown,Finance,41,Male,85000,14,Boston,2012-11-05,5
+104,Diana Wilson,Marketing,27,Female,56000,3,Seattle,2021-08-12,3
+105,Ethan Davis,IT,31,Male,72000,7,Austin,2018-01-10,4
+106,Fiona Miller,HR,38,Female,64000,11,New York,2014-09-18,5
+107,George Taylor,Finance,45,Male,91000,18,Chicago,2009-07-22,5
+108,Hannah Moore,Marketing,26,Female,54000,2,Seattle,2022-02-14,3
+109,Ian Thomas,IT,33,Male,,8,Boston,2016-05-30,4
+110,Julia Anderson,HR,30,Female,59000,5,,2019-10-08,4
+111,Kevin White,Finance,39,Male,83000,12,Austin,2013-04-25,5
+112,Lisa Martin,Marketing,28,Female,57000,4,New York,2020-12-01,
+113,Michael Harris,IT,36,Male,79000,10,Chicago,2015-07-17,5
+114,Nancy Clark,HR,32,Female,61000,6,Seattle,2018-09-09,4
+115,Oliver Lewis,Finance,43,Male,90000,17,Boston,2010-03-11,5
+```

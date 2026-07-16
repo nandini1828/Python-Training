@@ -686,3 +686,190 @@ After completing this repository, you should be able to:
 Most importantly, you should understand **why** you are performing each operation, not just **how**.
 
 ---
+---
+
+# Frequently Asked Questions (FAQ)
+
+## 1. Is this repository beginner-friendly?
+
+Yes.
+
+This repository is designed for learners with little or no experience with Pandas.
+
+Basic Python knowledge is sufficient.
+
+---
+
+## 2. Do I need to know NumPy first?
+
+No.
+
+Although Pandas is built on top of NumPy, this repository explains Pandas independently.
+
+Whenever NumPy concepts are required, they will be explained in simple terms.
+
+---
+
+## 3. Do I need a database?
+
+No.
+
+All examples use CSV files provided in the `datasets/` folder.
+
+Later, the same concepts can be applied to databases such as MySQL, PostgreSQL, SQLite, or SQL Server.
+
+---
+
+## 4. Can I use Jupyter Notebook?
+
+Yes.
+
+You can use:
+
+* VS Code
+* Jupyter Notebook
+* Google Colab
+* PyCharm
+* Spyder
+* Any Python IDE
+
+All examples are standard Python programs and work in any environment.
+
+---
+
+## 5. Can I use these concepts in Data Science?
+
+Absolutely.
+
+Pandas is one of the most important libraries in:
+
+* Data Science
+* Machine Learning
+* Artificial Intelligence
+* Data Analytics
+* Business Intelligence
+* Financial Analysis
+* Research
+
+---
+
+## 6. Should I memorize Pandas commands?
+
+No.
+
+Focus on understanding:
+
+* What problem a command solves
+* When to use it
+* Why it is useful
+
+With regular practice, the syntax will become familiar naturally.
+
+---
+
+## Repository Roadmap
+
+The repository is designed to be completed in the following order.
+
+| Step | Topic           | Goal                                             |
+| ---: | --------------- | ------------------------------------------------ |
+|    1 | Introduction    | Understand what Pandas is and where it is used   |
+|    2 | Series          | Learn the basic one-dimensional data structure   |
+|    3 | DataFrame       | Learn the primary two-dimensional data structure |
+|    4 | Loading Data    | Read data from CSV files                         |
+|    5 | Inspecting Data | Explore and understand datasets                  |
+|    6 | Indexing        | Access rows and columns efficiently              |
+|    7 | Filtering       | Select data based on conditions                  |
+|    8 | Data Cleaning   | Handle missing and incorrect data                |
+|    9 | GroupBy         | Summarize and analyze data                       |
+|   10 | Merge & Concat  | Combine multiple datasets                        |
+|   11 | Time Series     | Work with dates and time-based data              |
+|   12 | Best Practices  | Write clean and efficient Pandas code            |
+|   13 | Exercises       | Reinforce learning through practice              |
+|   14 | Projects        | Apply everything in real-world scenarios         |
+
+Follow the roadmap in sequence for the best learning experience.
+
+---
+
+# Repository Philosophy
+
+This repository follows a simple philosophy:
+
+> **Understand first. Memorize later. Practice always.**
+
+Every concept is explained with the goal of building understanding rather than encouraging rote memorization.
+
+You are encouraged to:
+
+* Read carefully
+* Run every example
+* Modify the code
+* Observe the output
+* Solve exercises
+* Build projects
+
+Learning happens by doing.
+
+---
+
+# Contributing
+
+This repository is intended as a personal learning resource, but improvements are always welcome.
+
+If you find:
+
+* Typographical mistakes
+* Incorrect explanations
+* Bugs in example programs
+* Better approaches
+* Missing edge cases
+
+feel free to improve them and keep the repository updated.
+
+The goal is continuous learning and improvement.
+
+---
+
+# License
+
+This project is distributed under the MIT License.
+
+You are free to:
+
+* Use the code
+* Study the examples
+* Modify the programs
+* Share the repository
+* Build your own projects based on these concepts
+
+Please refer to the `LICENSE` file for complete license details.
+
+---
+
+# Final Advice
+
+Learning Pandas is not about remembering hundreds of functions.
+
+It is about learning how to think about data.
+
+Whenever you encounter a new dataset, ask yourself:
+
+* What information does this dataset contain?
+* What questions can I answer using this data?
+* Which Pandas operations can help me answer those questions?
+* How can I transform raw data into meaningful insights?
+
+As you continue practicing, these questions will become second nature.
+
+---
+
+# Acknowledgements
+
+This repository was created with the goal of providing a structured, beginner-friendly, and practical learning experience for anyone interested in mastering Pandas.
+
+Whether you are preparing for interviews, working on academic projects, analyzing business data, or starting your journey into Data Science, we hope this repository helps you build a strong foundation.
+
+Happy Learning and Happy Coding!
+
+---

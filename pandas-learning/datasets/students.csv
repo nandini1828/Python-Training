@@ -1,0 +1,18 @@
+```csv
+StudentID,Name,Gender,Age,Class,Section,Math,Science,English,Attendance,City
+201,Aarav Sharma,Male,15,10,A,88,91,85,95,Hyderabad
+202,Diya Patel,Female,14,9,B,92,89,94,98,Mumbai
+203,Vivaan Reddy,Male,15,10,A,76,82,79,90,Bengaluru
+204,Ananya Singh,Female,14,9,C,85,87,90,96,Delhi
+205,Krishna Rao,Male,16,10,B,95,93,91,99,Hyderabad
+206,Meera Iyer,Female,15,10,A,81,78,84,92,Chennai
+207,Arjun Verma,Male,14,9,A,69,74,71,88,Pune
+208,Sneha Nair,Female,15,10,C,90,95,93,97,Kochi
+209,Rohan Gupta,Male,16,10,B,,86,80,89,Delhi
+210,Ishita Das,Female,14,9,B,84,,88,94,Kolkata
+211,Karan Mehta,Male,15,10,A,78,80,,91,Ahmedabad
+212,Priya Kapoor,Female,15,10,C,91,90,92,,Mumbai
+213,Rahul Joshi,Male,14,9,A,73,77,75,87,Jaipur
+214,Nisha Reddy,Female,16,10,B,89,92,90,96,Hyderabad
+215,Aditya Kulkarni,Male,15,10,C,83,85,81,93,Pune
+```
