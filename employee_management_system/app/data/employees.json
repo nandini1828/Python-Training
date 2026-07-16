@@ -1,0 +1,92 @@
+[
+    {
+        "employee_id": "E001",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "age": 28,
+        "email": "alice.smith@example.com",
+        "department_id": "D001",
+        "salary": 70000.0,
+        "address": {
+            "city": "New York",
+            "state": "NY",
+            "country": "USA",
+            "postal_code": "10001"
+        }
+    },
+    {
+        "employee_id": "E002",
+        "first_name": "Bob",
+        "last_name": "Jones",
+        "age": 34,
+        "email": "bob.jones@example.com",
+        "department_id": "D002",
+        "salary": 62000.0,
+        "address": {
+            "city": "Chicago",
+            "state": "IL",
+            "country": "USA",
+            "postal_code": "60601"
+        }
+    },
+    {
+        "employee_id": "E900",
+        "first_name": "Test",
+        "last_name": "User",
+        "age": 30,
+        "email": "test.user@example.com",
+        "department_id": "D001",
+        "salary": 55000.0,
+        "address": {
+            "city": "Boston",
+            "state": "MA",
+            "country": "USA",
+            "postal_code": "02101"
+        }
+    },
+    {
+        "employee_id": "E900",
+        "first_name": "Test",
+        "last_name": "User",
+        "age": 30,
+        "email": "test.user@example.com",
+        "department_id": "D001",
+        "salary": 55000.0,
+        "address": {
+            "city": "Boston",
+            "state": "MA",
+            "country": "USA",
+            "postal_code": "02101"
+        }
+    },
+    {
+        "employee_id": "E900",
+        "first_name": "Test",
+        "last_name": "User",
+        "age": 30,
+        "email": "test.user@example.com",
+        "department_id": "D001",
+        "salary": 55000.0,
+        "address": {
+            "city": "Boston",
+            "state": "MA",
+            "country": "USA",
+            "postal_code": "02101"
+        }
+    },
+    {
+        "employee_id": "E900",
+        "first_name": "Test",
+        "last_name": "User",
+        "age": 30,
+        "email": "test.user@example.com",
+        "department_id": "D001",
+        "salary": 55000.0,
+        "address": {
+            "city": "Boston",
+            "state": "MA",
+            "country": "USA",
+            "postal_code": "02101"
+        }
+    }
+]

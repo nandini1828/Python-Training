@@ -1,0 +1,3 @@
+employee_id,first_name,last_name,age,email,department_id,salary,city,state,country,postal_code
+E001,Alice,Smith,28,alice.smith@example.com,D001,70000.0,New York,NY,USA,10001
+E002,Bob,Jones,34,bob.jones@example.com,D002,62000.0,Chicago,IL,USA,60601

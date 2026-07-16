@@ -1,0 +1,12 @@
+[
+    {
+        "department_id": "D001",
+        "name": "Engineering",
+        "manager": "Ava Carter"
+    },
+    {
+        "department_id": "D002",
+        "name": "Finance",
+        "manager": "Liam Walker"
+    }
+]
