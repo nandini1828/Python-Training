@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "isbn": "9780441172719",
+    "status": 0
+  },
+  {
+    "id": 2,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "isbn": "9780441172719",
+    "status": 0
+  },
+  {
+    "id": 3,
+    "title": "the lost love",
+    "author": "chethan",
+    "isbn": "62811722333",
+    "status": 0
+  }
+]

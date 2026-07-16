@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Ada",
+    "email": "ada@example.com",
+    "borrowed_books": []
+  },
+  {
+    "id": 2,
+    "name": "Ada",
+    "email": "ada@example.com",
+    "borrowed_books": []
+  },
+  {
+    "id": 3,
+    "name": "vyshu",
+    "email": "vyshu@gmail.com",
+    "borrowed_books": []
+  }
+]

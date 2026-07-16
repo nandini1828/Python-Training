@@ -12,10 +12,13 @@ def run():
     # Import Pandas
     print("Pandas Imported Successfully")
 
-    # Series
-    numbers = pd.Series([10, 20, 30, 40])
+    # Add custom indexes to series.
+    numbers = pd.Series(
+    [10, 20, 30, 40],
+    index=["A", "B", "C", "D"]
+)
 
-    print("\nSeries")
+    print("\nSeries with Custom Index")
     print(numbers)
 
     # DataFrame
