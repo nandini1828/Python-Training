@@ -13,6 +13,7 @@ from app.schemas.user_schema import UserResponse
 class CartCreate(BaseModel):
     """
     Request schema for creating a cart.
+
     """
 
     user_id: str
